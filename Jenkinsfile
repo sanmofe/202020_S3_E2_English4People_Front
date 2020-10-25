@@ -1,7 +1,7 @@
 pipeline {
    agent any
    environment {
-      GIT_REPO = '202020_S1_E1_Carpooling_Front'
+      GIT_REPO = '202020_S3_E2_English4People_Front'
       GIT_CREDENTIAL_ID = '692cb316-0794-4522-9cf0-83c2618a09e5'
       SONARQUBE_URL = 'http://172.24.101.209:8082/sonar-isis2603'
    }
