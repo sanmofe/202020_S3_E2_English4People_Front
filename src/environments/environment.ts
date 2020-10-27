@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'localhost:8080/s3_english4people-api/api/'
+  baseUrl: 'http://localhost:8080/s3_english4people-api/api/'
 };
 
 /*

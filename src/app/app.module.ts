@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ContratoModule } from './contrato/contrato.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { ContratoModule } from './contrato/contrato.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ContratoModule
+    ContratoModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

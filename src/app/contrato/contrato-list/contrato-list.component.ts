@@ -16,6 +16,7 @@ export class ContratoListComponent implements OnInit {
   }
   ngOnInit() {
     this.getContratos();
+    console.log("init");
   }
 
 }
