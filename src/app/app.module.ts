@@ -2,6 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
+import { EstudianteModule}  from './estudiante/estudiante.module';
+import { MensajeModule } from './mensaje/mensaje.module'
+import { ChatModule } from './chat/chat.module'
 import {ProfesorModule} from './profesor/profesor.module';
 import {CertificadoModule} from './certificado/certificado.module';
 import { AppRoutingModule } from './app-routing.module';
@@ -19,6 +22,9 @@ import { DiaSemanaModule } from './diaSemana/diaSemana.module';
   ],
   imports: [
     BrowserModule,
+    EstudianteModule,
+    ChatModule,
+    MensajeModule,
     AppRoutingModule,
     ProfesorModule,
     CertificadoModule,
