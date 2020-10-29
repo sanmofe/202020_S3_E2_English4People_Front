@@ -9,7 +9,7 @@ import { environment } from '../../environments/environment';
   providedIn: 'root',
 })
 export class IdiomaService {
-  private apiUrl = environment.baseUrl + 'idiomas.json';
+  private apiUrl = environment.baseUrl + 'idiomas';
 
   constructor(private http: HttpClient) {}
 
