@@ -4,7 +4,7 @@
 
 const host = 'localhost';
 const port = '8080';
-const appName = 'frontstepbystep-api';
+const appName = 'english4people-api';
 const rootApi = 'api';
 
 export const environment = {
