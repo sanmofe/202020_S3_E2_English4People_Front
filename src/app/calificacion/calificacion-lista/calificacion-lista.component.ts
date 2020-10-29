@@ -11,9 +11,9 @@ import { CalificacionService } from '../calificacion.service';
 export class CalificacionListaComponent implements OnInit {
 
   constructor(private calificacionService: CalificacionService) { }
- 
+
   calificaciones: Array<Calificacion>;
- 
+
   getCalificaciones(): void {
     this.calificacionService.getCalificaciones()
       .subscribe(calificaciones => {

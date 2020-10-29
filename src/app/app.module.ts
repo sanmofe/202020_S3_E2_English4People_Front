@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { ContratoModule } from './contrato/contrato.module';
 import { HorarioModule } from './horario/horario.module';
 import { CalificacionModule } from './calificacion/calificacion.module';
+import { RespuestaModule } from './respuesta/respuesta.module'
 import { IdiomaModule } from './idioma/idioma.module';
 
 @NgModule({
@@ -24,6 +25,7 @@ import { IdiomaModule } from './idioma/idioma.module';
     HorarioModule,
     IdiomaModule,
     CalificacionModule,
+    RespuestaModule,
     HttpClientModule
   ],
   providers: [],
