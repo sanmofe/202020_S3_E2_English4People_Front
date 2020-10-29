@@ -1,7 +1,5 @@
 export class Chat{
-
   constructor()
   {
-
   }
 }

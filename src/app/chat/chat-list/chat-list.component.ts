@@ -1,21 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import { Estudiante } from '../estudiante';
-import { EstudianteServiceService} from '../estudiante-service.service';
+import { Chat } from '../chat';
+import { ChatServiceService} from '../chat-service.service';
 
 @Component({
-  selector: 'app-estudiante-list',
-  templateUrl: './estudiante-list.component.html',
-  styleUrls: ['./estudiante-list.component.css']
+  selector: 'app-chat-lista',
+  templateUrl: './chat-list.component.html',
+  styleUrls: ['./chat-list.component.css']
 })
-export class EstudianteListComponent implements OnInit {
+export class ChatListComponent implements OnInit {
 
-  constructor(private service: EstudianteServiceService) { }
-  estudiantes: Array<Estudiante>;
-  getEstudiantes(): any{
-    return this.service.getEstudiantes().subscribe(c => this.estudiantes = c);
+  constructor(private service: ChatServiceService) { }
+  chats: Array<Chat>;
+  getChats(): any{
+    return this.service.getChats().subscribe(c => this.chats = c);
   }
   ngOnInit() {
-    this.getEstudiantes();
+    this.getChats();
     console.log("init");
   }
 
