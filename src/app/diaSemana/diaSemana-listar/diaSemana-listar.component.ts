@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DiaSemana } from '../diaSemana';
 
 @Component({
   selector: 'app-diaSemana-listar',
@@ -8,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class DiaSemanaListarComponent implements OnInit {
 
   constructor() { }
+
+  private books: Array<DiaSemana>;
 
   ngOnInit() {
   }
