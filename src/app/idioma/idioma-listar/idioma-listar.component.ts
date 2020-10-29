@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Idioma } from '../idioma';
+import { IdiomaService } from '../idioma.service';
 
 @Component({
   selector: 'app-idioma-listar',
@@ -8,11 +9,19 @@ import { Idioma } from '../idioma';
 })
 export class IdiomaListarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private idiomaService: IdiomaService) { }
 
-  private books: Array<Idioma>;
+  private idiomas: Array<Idioma>;
+
+  getIdiomas(): void {
+    this.idiomaService.getIdiomas()
+      .subscribe(idiomas => {
+        this.idiomas = idiomas;
+      });
+  }
 
   ngOnInit() {
+    this.getIdiomas();
   }
 
 }
