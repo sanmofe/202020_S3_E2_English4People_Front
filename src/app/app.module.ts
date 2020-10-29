@@ -6,7 +6,9 @@ import {ProfesorModule} from './profesor/profesor.module';
 import {CertificadoModule} from './certificado/certificado.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { ContratoModule } from './contrato/contrato.module';
+import { CalificacionModule } from './calificacion/calificacion.module';
+import { IdiomaModule } from './idioma/idioma.module';
 @NgModule({
   declarations: [
     AppComponent
@@ -16,6 +18,9 @@ import { AppComponent } from './app.component';
     AppRoutingModule,
     ProfesorModule,
     CertificadoModule,
+    ContratoModule,
+    IdiomaModule,
+    CalificacionModule,
     HttpClientModule
   ],
   providers: [],
