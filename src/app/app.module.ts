@@ -5,9 +5,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ContratoModule } from './contrato/contrato.module';
+import { CalificacionModule } from './calificacion/calificacion.module';
 import { IdiomaModule } from './idioma/idioma.module';
-
-
 @NgModule({
   declarations: [
     AppComponent
@@ -17,6 +16,7 @@ import { IdiomaModule } from './idioma/idioma.module';
     AppRoutingModule,
     ContratoModule,
     IdiomaModule,
+    CalificacionModule,
     HttpClientModule
   ],
   providers: [],
