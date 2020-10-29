@@ -7,6 +7,6 @@ import { MaterialDeclaseListComponent } from './materialDeClase-list/materialDeC
     CommonModule
   ],
   declarations: [MaterialDeclaseListComponent],
-  export: [MaterialDeclaseListComponent]
+  exports: [MaterialDeclaseListComponent]
 })
 export class MaterialDeclaseModule { }
