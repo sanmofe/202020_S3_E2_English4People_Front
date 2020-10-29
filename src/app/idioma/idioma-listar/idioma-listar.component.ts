@@ -11,7 +11,7 @@ export class IdiomaListarComponent implements OnInit {
 
   constructor(private idiomaService: IdiomaService) { }
 
-  private idiomas: Array<Idioma>;
+  public idiomas: Array<Idioma>;
 
   getIdiomas(): void {
     this.idiomaService.getIdiomas()
