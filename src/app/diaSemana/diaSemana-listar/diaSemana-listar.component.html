@@ -1,3 +1,42 @@
-<p>
-  diaSemana-listar works!
-</p>
+<div class="container-fluid">
+  <div class="col-6">
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="h4">Lunes</th>
+          <th class="h4">Martes</th>
+          <th class="h4">Miercoles</th>
+          <th class="h4">Jueves</th>
+          <th class="h4">Viernes</th>
+          <th class="h4">Sabado</th>
+          <th class="h4">Domingo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let i of diasSemana">
+          <td>
+            <dd>{{i.lunes}}</dd>
+          </td>
+          <td>
+            <dd>{{i.martes}}</dd>
+          </td>
+          <td>
+            <dd>{{i.miercoles}}</dd>
+          </td>
+          <td>
+            <dd>{{i.jueves}}</dd>
+          </td>
+          <td>
+            <dd>{{i.viernes}}</dd>
+          </td>
+          <td>
+            <dd>{{i.sabado}}</dd>
+          </td>
+          <td>
+            <dd>{{i.domingo}}</dd>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

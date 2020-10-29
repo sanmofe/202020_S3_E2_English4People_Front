@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DiaSemana } from '../diaSemana';
+import { DiaSemanaService } from '../diaSemana.service';
 
 @Component({
   selector: 'app-diaSemana-listar',
@@ -8,11 +9,18 @@ import { DiaSemana } from '../diaSemana';
 })
 export class DiaSemanaListarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private diaSemanaService: DiaSemanaService) { }
 
-  private books: Array<DiaSemana>;
+  public diasSemana: Array<DiaSemana>;
 
+  getDiasSemana(): void {
+    this.diaSemanaService.getDiasSemana()
+      .subscribe(diasSemana => {
+        this.diasSemana = diasSemana;
+      });
+  }
   ngOnInit() {
+    this.getDiasSemana();
   }
 
 }
