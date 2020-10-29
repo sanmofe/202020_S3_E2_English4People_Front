@@ -1,16 +1,54 @@
-/* tslint:disable:no-unused-variable */
+import { TestBed, async, inject, getTestBed } from "@angular/core/testing";
+import { HorarioServiceService } from "./horario-service.service";
 
-import { TestBed, async, inject } from '@angular/core/testing';
-import { HorarioServiceService } from './horario-service.service';
+import {
+ HttpTestingController,
+ HttpClientTestingModule,
+} from "@angular/common/http/testing";
 
-describe('Service: HorarioService', () => {
-  beforeEach(() => {
-    TestBed.configureTestingModule({
-      providers: [HorarioServiceService]
-    });
-  });
+import faker from "faker";
+import { Horario } from "./horario";
+import { environment } from "../../environments/environment";
 
-  it('should ...', inject([HorarioServiceService], (service: HorarioServiceService) => {
-    expect(service).toBeTruthy();
-  }));
+describe("Service: Horario", () => {
+ let injector: TestBed;
+ let service: HorarioServiceService;
+ let httpMock: HttpTestingController;
+ let apiUrl = environment.baseUrl + "horarios";
+
+ beforeEach(() => {
+   TestBed.configureTestingModule({
+     imports: [HttpClientTestingModule],
+     providers: [HorarioServiceService],
+   });
+   injector = getTestBed();
+   service = injector.get(HorarioServiceService);
+   httpMock = injector.get(HttpTestingController);
+ });
+
+ afterEach(() => {
+   httpMock.verify();
+ });
+
+ it("getPost() should return 10 records", () => {
+   let mockPosts: Horario[] = [];
+
+   for (let i = 1; i < 11; i++) {
+     let horario = new Horario(
+       i,
+       faker.lorem.sentence(),
+       faker.lorem.sentence()
+     );
+
+     mockPosts.push(horario);
+   }
+
+   service.getHorarios().subscribe((horarios) => {
+     expect(horarios.length).toBe(10);
+   });
+
+   const req = httpMock.expectOne(apiUrl);
+   expect(req.request.method).toBe("GET");
+   req.flush(mockPosts);
+ });
 });

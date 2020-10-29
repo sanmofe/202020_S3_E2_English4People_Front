@@ -16,3 +16,4 @@ export class DiaSemanaService {
   getDiasSemana(): Observable<DiaSemana[]> {
     return this.http.get<DiaSemana[]>(this.apiUrl);
 }
+}
