@@ -11,6 +11,7 @@ import { HorarioModule } from './horario/horario.module';
 import { CalificacionModule } from './calificacion/calificacion.module';
 import { RespuestaModule } from './respuesta/respuesta.module'
 import { IdiomaModule } from './idioma/idioma.module';
+import { DiaSemanaModule } from './diaSemana/diaSemana.module';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { IdiomaModule } from './idioma/idioma.module';
     IdiomaModule,
     CalificacionModule,
     RespuestaModule,
+    DiaSemanaModule,
     HttpClientModule
   ],
   providers: [],
