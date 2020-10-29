@@ -1,0 +1,16 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Hora de inicio</th>
+      <th scope="col">Hora fin</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor=" let h of horarios ">
+      <td>{{ h.id }}</td>
+      <td>{{ h.horaInicio }}</td>
+      <td>{{ h.horaFin }}</td>
+    </tr>
+  </tbody>
+</table>

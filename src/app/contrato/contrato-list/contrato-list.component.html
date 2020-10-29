@@ -1,12 +1,18 @@
 <table class="table table-striped">
   <thead>
     <tr>
+      <th scope="col">id</th>
+      <th scope="col">Numero de horas</th>
       <th scope="col">Costo</th>
+      <th scope="col">Medio de pago</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor=" let c of contratos ">
+      <td>{{ c.id }}</td>
+      <td>{{ c.numeroHoras }}</td>
       <td>{{ c.costo }}</td>
+      <td>{{ c.medioPago }}</td>
     </tr>
   </tbody>
 </table>
