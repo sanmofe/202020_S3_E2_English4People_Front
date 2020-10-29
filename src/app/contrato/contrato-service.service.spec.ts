@@ -40,7 +40,8 @@ describe("Service: Contrato", () => {
        i,
        faker.random.number(),
        faker.random.number(),
-       faker.lorem.sentence()
+       faker.lorem.sentence(),
+       null
      );
 
      mockPosts.push(contrato);

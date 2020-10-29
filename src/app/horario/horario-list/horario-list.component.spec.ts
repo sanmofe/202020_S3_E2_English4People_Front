@@ -7,6 +7,7 @@ import { HorarioListComponent } from "./horario-list.component";
 import { HttpClientTestingModule } from "@angular/common/http/testing";
 import faker from "faker";
 import { Horario } from "../horario";
+import { DiaSemana } from "src/app/diaSemana/diaSemana";
 
 describe("HorarioListComponent", () => {
  let component: HorarioListComponent;
@@ -23,11 +24,22 @@ describe("HorarioListComponent", () => {
  beforeEach(() => {
    fixture = TestBed.createComponent(HorarioListComponent);
    component = fixture.componentInstance;
+   let diaSemana = new DiaSemana(
+    faker.random.number,
+    faker.random.boolean,
+    faker.random.boolean,
+    faker.random.boolean,
+    faker.random.boolean,
+    faker.random.boolean,
+    faker.random.boolean,
+    faker.random.boolean
+  );
    component.horarios = [
      new Horario(
        faker.random.number(),
        faker.lorem.sentence(),
-       faker.lorem.sentence()
+       faker.lorem.sentence(),
+       diaSemana
      ),
    ];
    fixture.detectChanges();
@@ -42,10 +54,10 @@ describe("HorarioListComponent", () => {
    expect(debug.query(By.css("figcaption")).nativeElement.innerText).toContain(
      component.horarios[0].horaInicio
    );
-/**
+
    expect(debug.query(By.css("figcaption")).nativeElement.innerText).toContain(
-     component.contratos[0].editorial.name
+     component.horarios[0].diaSemana.lunes
    );
-   */
+
 });
 });

@@ -37,7 +37,8 @@ describe("Service: Horario", () => {
      let horario = new Horario(
        i,
        faker.lorem.sentence(),
-       faker.lorem.sentence()
+       faker.lorem.sentence(),
+       null
      );
 
      mockPosts.push(horario);

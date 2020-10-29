@@ -7,6 +7,7 @@ import { ContratoListComponent } from "./contrato-list.component";
 import { HttpClientTestingModule } from "@angular/common/http/testing";
 import faker from "faker";
 import { Contrato } from "../contrato";
+import { Profesor } from "src/app/profesor/profesor";
 
 describe("ContratoListComponent", () => {
  let component: ContratoListComponent;
@@ -23,12 +24,22 @@ describe("ContratoListComponent", () => {
  beforeEach(() => {
    fixture = TestBed.createComponent(ContratoListComponent);
    component = fixture.componentInstance;
+   let profesor = new Profesor(
+    faker.random.number(),
+    faker.lorem.sentence(),
+    faker.random.number(),
+    faker.lorem.sentence(),
+    faker.lorem.sentence(),
+    faker.lorem.sentence(),
+    faker.lorem.sentence()
+  );
    component.contratos = [
      new Contrato(
        faker.random.number(),
        faker.random.number(),
        faker.random.number(),
-       faker.lorem.sentence()
+       faker.lorem.sentence(),
+       profesor
      ),
    ];
    fixture.detectChanges();
@@ -43,10 +54,9 @@ describe("ContratoListComponent", () => {
    expect(debug.query(By.css("figcaption")).nativeElement.innerText).toContain(
      component.contratos[0].costo
    );
-/**
+
    expect(debug.query(By.css("figcaption")).nativeElement.innerText).toContain(
-     component.contratos[0].editorial.name
+     component.contratos[0].profesor.identificacion
    );
-   */
  });
 });
