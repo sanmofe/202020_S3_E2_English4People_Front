@@ -1,10 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ContratoModule } from './contrato/contrato.module';
-import { HttpClientModule } from '@angular/common/http';
+import { IdiomaModule } from './idioma/idioma.module';
+
 
 @NgModule({
   declarations: [
@@ -14,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     ContratoModule,
+    IdiomaModule,
     HttpClientModule
   ],
   providers: [],
