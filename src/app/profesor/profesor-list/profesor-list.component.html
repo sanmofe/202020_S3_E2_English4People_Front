@@ -1,3 +1,22 @@
-<p>
-  profesor-list works!
-</p>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Nombre</th>
+      <th scope="col">Identificacion</th>
+      <th scope="col">Login</th>
+      <th scope="col">Contraseña</th>
+      <th scope="col">Informacion Academica</th>
+      <th scope="col">Canal de Youtube</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of profesores">
+      <td>{{ p.nombre }}</td>
+      <td>{{ p.identificacion}}</td>
+      <td>{{ p.login}}</td>
+      <td>{{ p.contrasena}}</td>
+      <td>{{ p.informacionAcademica}}</td>
+      <td>{{ p.canalYoutube}}</td>
+    </tr>
+  </tbody>
+</table>

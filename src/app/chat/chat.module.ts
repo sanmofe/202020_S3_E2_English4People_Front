@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ChatComponent } from './chat.component';
 import { ChatListComponent } from '../chat/chat-list/chat-list.component';
 
 @NgModule({
   imports: [
     CommonModule
   ],
-  declarations: [ChatComponent],
+  declarations: [ChatListComponent],
   exports : [ChatListComponent]
 })
 export class ChatModule { }
