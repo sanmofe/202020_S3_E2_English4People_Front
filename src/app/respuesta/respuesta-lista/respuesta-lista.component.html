@@ -1,3 +1,26 @@
-<p>
-  respuesta-lista works!
-</p>
+<div class="container-fluid">
+  <div class="col p-5">
+      <table class="">
+        <thead class="thead-dark">
+          <!--<tr>-->
+            <th scope="col">Comentario</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">Calificacion</th>
+          <!--</tr>-->
+        </thead>
+        <tbody>
+          <tr *ngFor="let c of respuestas">
+            <td>
+              <dd>{{c.comentario}}</dd>
+            </td>
+            <td>
+              <dd>{{c.fecha}}</dd>
+            </td>
+            <td>
+              <dd>{{c.calificacion? c.calificacion: "no asignada"}}</dd>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+</div>
