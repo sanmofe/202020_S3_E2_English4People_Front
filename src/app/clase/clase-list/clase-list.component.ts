@@ -13,7 +13,7 @@ export class ClaseListComponent implements OnInit {
   private clases : Array<Clase>
   getClases(): any
   {
-    return this.service.getClases.subscribe(c => this.clases = c);
+    return this.service.getClases().subscribe(c => this.clases = c);
   }
   ngOnInit() {
     this.getClases();

@@ -14,7 +14,7 @@ export class ActividadListComponent implements OnInit {
 
   getActividades():any
   {
-   return this.service.getActividades.subscribe(c => this.actividades = c);
+   return this.service.getActividades().subscribe(c => this.actividades = c);
   }
 
   ngOnInit() {

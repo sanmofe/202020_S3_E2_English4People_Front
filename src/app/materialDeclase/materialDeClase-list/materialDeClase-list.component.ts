@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MaterialDeclase, materialDeClase } from '../materialDeClase';
+import { MaterialDeclase} from '../materialDeClase';
 import { MaterialDeClaseServiceService} from '../materialDeClase-service.service';
 
 
