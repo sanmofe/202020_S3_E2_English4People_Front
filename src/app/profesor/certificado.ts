@@ -1,3 +1,4 @@
+import {Profesor} from './profesor';
 export class Certificado{
   id:number;
   nombre: string;

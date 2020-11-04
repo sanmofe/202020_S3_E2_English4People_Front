@@ -6,7 +6,6 @@ import { EstudianteModule}  from './estudiante/estudiante.module';
 import { MensajeModule } from './mensaje/mensaje.module'
 import { ChatModule } from './chat/chat.module'
 import {ProfesorModule} from './profesor/profesor.module';
-import {CertificadoModule} from './certificado/certificado.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ContratoModule } from './contrato/contrato.module';
@@ -27,7 +26,6 @@ import { DiaSemanaModule } from './diaSemana/diaSemana.module';
     MensajeModule,
     AppRoutingModule,
     ProfesorModule,
-    CertificadoModule,
     ContratoModule,
     HorarioModule,
     IdiomaModule,
