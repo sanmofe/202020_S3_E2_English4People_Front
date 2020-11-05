@@ -1,3 +1,20 @@
-<p>
-  mensaje-list works!
-</p>
+<div class="container-fluid">
+  <div class="col p-6">
+      <table class="table" summary="mensajes">
+        <thead class="thead-dark">
+            <th scope="col">Contenido</th>
+            <th scope="col">Fecha</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let m of mensajes">
+            <td>
+              <dd>{{m.contenido}}</dd>
+            </td>
+            <td>
+              <dd>{{m.fecha}}</dd>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+</div>
