@@ -30,6 +30,7 @@ export class IdiomaListarComponent implements OnInit {
   onSelected(i: Idioma): void {
     this.selected = true;
     this.selectedIdioma = i;
+    console.log(i);
   }
 
 }

@@ -1,35 +1,45 @@
-    <div class="container-fluid">
-      <p class="h3 p-3">{{ idiomaDetail.id }}</p>
-      <div class="row">
-        <div class="col">
-          <dl>
-            <dt class="bold">Español</dt>
-            <dd>{{ idiomaDetail.espanol }}</dd>
-            <hr />
-            <dt class="bold">Inglés</dt>
-            <dd>{{ idiomaDetail.espanol }}</dd>
-            <hr />
-            <dt class="bold">Francés</dt>
-            <dd>{{ idiomaDetail.espanol }}</dd>
-            <hr />
-            <dt class="bold">Italiano</dt>
-            <dd>{{ idiomaDetail.espanol }}</dd>
-            <hr />
-            <dt class="bold">Portugués</dt>
-            <dd>{{ idiomaDetail.espanol }}</dd>
-            <hr />
-            <dt class="bold">Alemán</dt>
-            <dd>{{ idiomaDetail.espanol }}</dd>
-            <hr />
-            <dt class="bold">Japonés</dt>
-            <dd>{{ idiomaDetail.espanol }}</dd>
-            <hr />
-            <dt class="bold">Coreano</dt>
-            <dd>{{ idiomaDetail.espanol }}</dd>
-            <hr />
-            <dt class="bold">Mandarín</dt>
-            <dd>{{ idiomaDetail.espanol }}</dd>
-          </dl>
+<div class="container-fluid">
+  <p class="h3 p-3">Idiomas de {{ idiomaDetail.id }}:</p>
+  <div class="row">
+    <div class="col">
+      <dl>
+        <div *ngIf="idiomaDetail.espanol">
+          <dt class="bold">Español</dt>
+          <hr/>
         </div>
-      </div>
+        <div *ngIf="idiomaDetail.ingles">
+          <dt class="bold">Inglés</dt>
+          <hr/>
+        </div>
+        <div *ngIf="idiomaDetail.frances">
+          <dt class="bold">Francés</dt>
+          <hr/>
+        </div>
+        <div *ngIf="idiomaDetail.italiano">
+          <dt class="bold">Italiano</dt>
+          <hr/>
+        </div>
+        <div *ngIf="idiomaDetail.portugues">
+          <dt class="bold">Portugués</dt>
+          <hr/>
+        </div>
+        <div *ngIf="idiomaDetail.aleman">
+          <dt class="bold">Alemán</dt>
+          <hr/>
+        </div>
+        <div *ngIf="idiomaDetail.japones">
+          <dt class="bold">Japonés</dt>
+          <hr/>
+        </div>
+        <div *ngIf="idiomaDetail.coreano">
+          <dt class="bold">Coreano</dt>
+          <hr/>
+        </div>
+        <div *ngIf="idiomaDetail.mandarin">
+          <dt class="bold">Mandarín</dt>
+          <hr/>
+        </div>
+      </dl>
     </div>
+  </div>
+</div>
