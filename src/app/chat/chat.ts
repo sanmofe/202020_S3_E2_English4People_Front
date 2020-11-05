@@ -1,5 +1,7 @@
 export class Chat{
-  constructor()
+  id: number;
+  constructor(id: number)
   {
+    this.id = id;
   }
 }
