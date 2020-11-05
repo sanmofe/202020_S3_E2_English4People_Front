@@ -9,6 +9,9 @@ import { IdiomaService } from '../idioma.service';
 })
 export class IdiomaListarComponent implements OnInit {
 
+  selectedIdioma: Idioma;
+  selected = false;
+
   constructor(private idiomaService: IdiomaService) { }
 
   public idiomas: Array<Idioma>;
@@ -22,6 +25,11 @@ export class IdiomaListarComponent implements OnInit {
 
   ngOnInit() {
     this.getIdiomas();
+  }
+
+  onSelected(i: Idioma): void {
+    this.selected = true;
+    this.selectedIdioma = i;
   }
 
 }

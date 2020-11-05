@@ -3,48 +3,21 @@
     <table class="table" summary="idiomas">
       <thead>
         <tr>
-          <th class="h4" scope="col">Español</th>
-          <th class="h4" scope="col">Ingles</th>
-          <th class="h4" scope="col">Frances</th>
-          <th class="h4" scope="col">Italiano</th>
-          <th class="h4" scope="col">Portugues</th>
-          <th class="h4" scope="col">Aleman</th>
-          <th class="h4" scope="col">Japones</th>
-          <th class="h4" scope="col">Coreano</th>
-          <th class="h4" scope="col">Mandarin</th>
+          <th class="h4" scope="col">Id</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let i of idiomas">
           <td>
-            <dd>{{i.espanol}}</dd>
-          </td>
-          <td>
-            <dd>{{i.ingles}}</dd>
-          </td>
-          <td>
-            <dd>{{i.frances}}</dd>
-          </td>
-          <td>
-            <dd>{{i.italiano}}</dd>
-          </td>
-          <td>
-            <dd>{{i.portugues}}</dd>
-          </td>
-          <td>
-            <dd>{{i.aleman}}</dd>
-          </td>
-          <td>
-            <dd>{{i.japones}}</dd>
-          </td>
-          <td>
-            <dd>{{i.coreano}}</dd>
-          </td>
-          <td>
-            <dd>{{i.mandarin}}</dd>
+            <dd (click)="onSelected(i)">{{i.id}}</dd>
           </td>
         </tr>
       </tbody>
     </table>
+  </div>
+  <div class="col-6">
+    <div *ngIf="selected">
+      <app-idioma-detail [idiomaDetail]="selectedIdioma"></app-idioma-detail>
+    </div>
   </div>
 </div>
