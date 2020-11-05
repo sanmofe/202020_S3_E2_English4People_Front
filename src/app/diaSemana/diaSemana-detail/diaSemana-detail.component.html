@@ -1,0 +1,37 @@
+<div class="container-fluid">
+  <p class="h3 p-3">Días en los que {{ diaSemanaDetail.id }} tiene clase en ese horario:</p>
+  <div class="row">
+    <div class="col">
+      <dl>
+        <div *ngIf="diaSemanaDetail.lunes">
+          <dt class="bold">Lunes</dt>
+          <hr/>
+        </div>
+        <div *ngIf="diaSemanaDetail.martes">
+          <dt class="bold">Martes</dt>
+          <hr/>
+        </div>
+        <div *ngIf="diaSemanaDetail.miercoles">
+          <dt class="bold">Miercoles</dt>
+          <hr/>
+        </div>
+        <div *ngIf="diaSemanaDetail.jueves">
+          <dt class="bold">Jueves</dt>
+          <hr/>
+        </div>
+        <div *ngIf="diaSemanaDetail.viernes">
+          <dt class="bold">Viernes</dt>
+          <hr/>
+        </div>
+        <div *ngIf="diaSemanaDetail.sabado">
+          <dt class="bold">Sábado</dt>
+          <hr/>
+        </div>
+        <div *ngIf="diaSemanaDetail.domingo">
+          <dt class="bold">Domingo</dt>
+          <hr/>
+        </div>
+      </dl>
+    </div>
+  </div>
+</div>

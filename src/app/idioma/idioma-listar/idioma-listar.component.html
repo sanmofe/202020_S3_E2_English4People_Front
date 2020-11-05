@@ -1,23 +1,25 @@
 <div class="container-fluid">
-  <div class="col-6">
-    <table class="table" summary="idiomas">
-      <thead>
-        <tr>
-          <th class="h4" scope="col">Id</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let i of idiomas">
-          <td>
-            <dd (click)="onSelected(i)">{{i.id}}</dd>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="col-6">
-    <div *ngIf="selected">
-      <app-idioma-detail [idiomaDetail]="selectedIdioma"></app-idioma-detail>
+  <div class="row p-2">
+    <div class="col-6">
+      <table class="table" summary="idiomas">
+        <thead>
+          <tr>
+            <th class="h4" scope="col">Id de idioma</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let i of idiomas">
+            <td>
+              <dd (click)="onSelected(i)">{{ i.id }}</dd>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-6">
+      <div *ngIf="selected">
+        <app-idioma-detail [idiomaDetail]="selectedIdioma"></app-idioma-detail>
+      </div>
     </div>
   </div>
 </div>

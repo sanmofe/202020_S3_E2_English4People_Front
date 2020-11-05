@@ -1,42 +1,27 @@
 <div class="container-fluid">
-  <div class="col-6">
-    <table class="table" summary="dias de la semana">
-      <thead>
-        <tr>
-          <th class="h4" scope="col">Lunes</th>
-          <th class="h4" scope="col">Martes</th>
-          <th class="h4" scope="col">Miercoles</th>
-          <th class="h4" scope="col">Jueves</th>
-          <th class="h4" scope="col">Viernes</th>
-          <th class="h4" scope="col">Sabado</th>
-          <th class="h4" scope="col">Domingo</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let i of diasSemana">
-          <td>
-            <dd>{{i.lunes}}</dd>
-          </td>
-          <td>
-            <dd>{{i.martes}}</dd>
-          </td>
-          <td>
-            <dd>{{i.miercoles}}</dd>
-          </td>
-          <td>
-            <dd>{{i.jueves}}</dd>
-          </td>
-          <td>
-            <dd>{{i.viernes}}</dd>
-          </td>
-          <td>
-            <dd>{{i.sabado}}</dd>
-          </td>
-          <td>
-            <dd>{{i.domingo}}</dd>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="row p-2">
+    <div class="col-6">
+      <table class="table" summary="dias de la semana">
+        <thead>
+          <tr>
+            <th class="h4">Id de diaSemana</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let ds of diasSemana">
+            <td>
+              <dd (click)="onSelected(ds)">{{ ds.id }}</dd>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-6">
+      <div *ngIf="selected">
+        <app-diaSemana-detail
+          [diaSemanaDetail]="selectedDiaSemana"
+        ></app-diaSemana-detail>
+      </div>
+    </div>
   </div>
 </div>
