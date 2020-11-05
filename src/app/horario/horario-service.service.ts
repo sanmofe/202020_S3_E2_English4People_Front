@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 import { Horario } from './horario';
 import { Observable } from 'rxjs';
+import { HorarioDetail } from './horarioDetail';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,7 @@ export class HorarioServiceService {
   private apiUrl = environment.baseUrl + 'horarios';
 
 constructor(private http: HttpClient) { }
-getHorarios(): Observable<Array<Horario>>{
-  return this.http.get<Array<Horario>>(this.apiUrl);
+getHorarios(): Observable<Array<HorarioDetail>>{
+  return this.http.get<Array<HorarioDetail>>(this.apiUrl);
 }
 }

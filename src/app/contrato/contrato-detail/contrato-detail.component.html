@@ -1,1 +1,27 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-2">
+      <div class="thumb">
+        <img class="img-fluid" />
+      </div>
+    </div>
+    <div class="col">
+      <dl>
+        <dt>id</dt>
+        <dd>{{contratoDetail.id}}</dd>
+        <dt>Numero de horas</dt>
+        <dd>{{contratoDetail.numeroHoras}}</dd>
+        <dt> Costo</dt>
+        <dd>{{contratoDetail.costo}}</dd>
+        <dt>Medio de pago</dt>
+        <dd>{{ contratoDetail.medioPago}}</dd>
 
+        <hr>
+        <dt class="bold">Estudiante</dt>
+        <dd class="caption">{{contratoDetail.estudiante.nombre}}</dd>
+        <dt class="bold">Profesor</dt>
+        <dd class="caption">{{contratoDetail.profesor.nombre}}</dd>
+      </dl>
+    </div>
+  </div>
+</div>

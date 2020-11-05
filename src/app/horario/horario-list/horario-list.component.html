@@ -1,16 +1,22 @@
-<table class="table table-striped" summary="horarios">
-  <thead>
-    <tr>
-      <th scope="col">id</th>
-      <th scope="col">Hora de inicio</th>
-      <th scope="col">Hora fin</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor=" let h of horarios ">
-      <td>{{ h.id }}</td>
-      <td>{{ h.horaInicio }}</td>
-      <td>{{ h.horaFin }}</td>
-    </tr>
-  </tbody>
-</table>
+<div class="container-fluid">
+  <div class="col-6">
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="h4" scope="col">Id</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let h of horarios">
+          <td>
+            <dd (click)="onSelected(h)">{{h.id}}</dd>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div *ngIf="selected">
+  <app-horario-detail [horarioDetail]="selectedHorario"></app-horario-detail>
+</div>
