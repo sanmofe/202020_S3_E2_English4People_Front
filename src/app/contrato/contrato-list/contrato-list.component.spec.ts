@@ -8,6 +8,8 @@ import { HttpClientTestingModule } from "@angular/common/http/testing";
 import faker from "faker";
 import { Contrato } from "../contrato";
 import { Profesor } from "src/app/profesor/profesor";
+import { Estudiante } from 'src/app/estudiante/estudiante';
+import { ContratoDetail } from '../contratoDetail';
 
 describe("ContratoListComponent", () => {
  let component: ContratoListComponent;
@@ -31,14 +33,25 @@ describe("ContratoListComponent", () => {
     faker.lorem.sentence(),
     faker.lorem.sentence(),
     faker.lorem.sentence(),
+    faker.lorem.sentence(),
+    faker.lorem.sentence(),
+    null
+  );
+  let estudiante = new Estudiante(
+    faker.random.number(),
+    faker.lorem.sentence(),
+    faker.random.number(),
+    faker.lorem.sentence(),
+    faker.lorem.sentence(),
     faker.lorem.sentence()
   );
    component.contratos = [
-     new Contrato(
+     new ContratoDetail(
        faker.random.number(),
        faker.random.number(),
        faker.random.number(),
        faker.lorem.sentence(),
+       estudiante,
        profesor
      ),
    ];

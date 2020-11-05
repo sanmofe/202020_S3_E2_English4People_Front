@@ -41,6 +41,7 @@ describe("Service: Contrato", () => {
        faker.random.number(),
        faker.random.number(),
        faker.lorem.sentence(),
+       null,
        null
      );
 

@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 import { Contrato } from './contrato';
 import { Observable } from 'rxjs';
+import { ContratoDetail } from './contratoDetail';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,7 @@ export class ContratoServiceService {
   private apiUrl = environment.baseUrl + 'contratos';
 
 constructor(private http: HttpClient) { }
-getContratos(): Observable<Array<Contrato>>{
-  return this.http.get<Array<Contrato>>(this.apiUrl);
+getContratos(): Observable<Array<ContratoDetail>>{
+  return this.http.get<Array<ContratoDetail>>(this.apiUrl);
 }
 }
