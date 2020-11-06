@@ -24,6 +24,7 @@ export class ProfesorListComponent implements OnInit {
   getProfesores():any{
     return this.service.getProfesores().subscribe(p => this.profesores = p);
   }
+
   ngOnInit() {
     this.getProfesores();
   }
