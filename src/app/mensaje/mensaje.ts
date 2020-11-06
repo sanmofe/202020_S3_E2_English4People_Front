@@ -10,6 +10,5 @@ export class Mensaje{
     this.id = id;
     this.contenido = contenido;
     this.fecha = fecha;
-
   }
 }
