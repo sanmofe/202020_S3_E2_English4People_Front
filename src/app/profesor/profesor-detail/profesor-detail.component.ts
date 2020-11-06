@@ -11,6 +11,8 @@ export class ProfesorDetailComponent implements OnInit {
 
   @Input() profesorDetail: ProfesorDetail;
 
+  selectedProfesor: Profesor;
+
   constructor() { }
 
   ngOnInit() {

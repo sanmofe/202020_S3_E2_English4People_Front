@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 import { ProfesorDetail } from './profesorDetail';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ProfesorServiceService {
 
@@ -15,6 +15,5 @@ constructor(private http: HttpClient) {
  }
 getProfesores():Observable<Array<ProfesorDetail>>{
   return this.http.get<Array<ProfesorDetail>>(this.apiUrl);
-
 }
 }

@@ -11,8 +11,9 @@ import {ProfesorServiceService} from '../profesor-service.service';
 export class ProfesorListComponent implements OnInit {
 
   constructor(private service: ProfesorServiceService) { }
-  public profesores:Array<ProfesorDetail>;
-  selectedProfesor: ProfesorDetail;
+
+  profesores:Array<ProfesorDetail>;
+  selectedProfesor: Profesor;
   selected = false;
 
   onSelected(b: ProfesorDetail):void{
@@ -20,10 +21,8 @@ export class ProfesorListComponent implements OnInit {
     this.selectedProfesor = b;
   }
 
-  getProfesores():void{
-    this.service.getProfesores().subscribe(profesores => {
-      this.profesores = profesores;
-    });
+  getProfesores():any{
+    return this.service.getProfesores().subscribe(p => this.profesores = p);
   }
   ngOnInit() {
     this.getProfesores();

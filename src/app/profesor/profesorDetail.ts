@@ -8,7 +8,6 @@ import {Clase} from '../clase/clase';
 import {Actividad} from '../actividad/actividad';
 
 export class ProfesorDetail extends Profesor {
-
   horarios: Array<Horario>;
   contratos: Array<Contrato>;
   chats: Array<Chat>;
