@@ -15,6 +15,7 @@ export class HorarioDetailComponent implements OnInit {
 
   ngOnInit() {
     console.log(this.horarioDetail.id);
+    console.log("Prueba: " + this.horarioDetail.diaSemana);
   }
 
 }

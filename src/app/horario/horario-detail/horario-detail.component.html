@@ -13,10 +13,28 @@
         <dd>{{horarioDetail.horaInicio}}</dd>
         <dt>Hora final</dt>
         <dd>{{horarioDetail.horaFin}}</dd>
-
-        <hr>
-        <dt class="bold">Dia de la semana</dt>
-        <dd class="caption">{{horarioDetail.diaSemana.id}}</dd>
+        <dt>Dias de clase:</dt>
+        <div *ngIf="horarioDetail.diaSemana.lunes">
+          <dd>Lunes</dd>
+        </div>
+        <div *ngIf="horarioDetail.diaSemana.martes">
+          <dd>Martes</dd>
+        </div>
+        <div *ngIf="horarioDetail.diaSemana.miercoles">
+          <dd>Miércoles</dd>
+        </div>
+        <div *ngIf="horarioDetail.diaSemana.jueves">
+          <dd>Jueves</dd>
+        </div>
+        <div *ngIf="horarioDetail.diaSemana.viernes">
+          <dd>Viernes</dd>
+        </div>
+        <div *ngIf="horarioDetail.diaSemana.sabado">
+          <dd>Sábado</dd>
+        </div>
+        <div *ngIf="horarioDetail.diaSemana.domingo">
+          <dd>Domingo</dd>
+        </div>
       </dl>
     </div>
   </div>

@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  <p class="h3 p-3" >{{profesorDetail.nombre}}</p>
+  <p class="h3 p-3">{{ profesorDetail.nombre }}</p>
   <div class="row">
     <div class="col-2">
       <div class="thumb">
@@ -9,28 +9,64 @@
     <div class="col">
       <dl>
         <dt>Identificacion</dt>
-        <dd>{{profesorDetail.identificacion}}</dd>
+        <dd>{{ profesorDetail.identificacion }}</dd>
         <dt>Correo</dt>
-        <dd>{{profesorDetail.correo}}</dd>
-        <dt> Login</dt>
-        <dd>{{profesorDetail.login}}</dd>
-        <hr>
+        <dd>{{ profesorDetail.correo }}</dd>
+        <dt>Login</dt>
+        <dd>{{ profesorDetail.login }}</dd>
+        <hr />
         <dt>Informacion Academica</dt>
-        <dd>{{ profesorDetail.informacionAcademica}}</dd>
-        <hr>
+        <dd>{{ profesorDetail.informacionAcademica }}</dd>
+        <hr />
         <dt class="bold">Canal de Youtube</dt>
-        <dd class="caption">{{profesorDetail.canalYoutube}}</dd>
-        <hr>
-        <dt class="bold">Idioma</dt>
-        <dd>{{profesorDetail.idioma.id}}</dd>
+        <dd class="caption">{{ profesorDetail.canalYoutube }}</dd>
+        <hr />
+        <dt class="bold">Idiomas hablados por el profesor</dt>
+        <div *ngIf="profesorDetail.idioma.espanol">
+          <dd>Español</dd>
+        </div>
+        <div *ngIf="profesorDetail.idioma.ingles">
+          <dd>Inglés</dd>
+        </div>
+        <div *ngIf="profesorDetail.idioma.frances">
+          <dd>Francés</dd>
+        </div>
+        <div *ngIf="profesorDetail.idioma.italiano">
+          <dd>Italiano</dd>
+        </div>
+        <div *ngIf="profesorDetail.idioma.portugues">
+          <dd>Portugués</dd>
+        </div>
+        <div *ngIf="profesorDetail.idioma.aleman">
+          <dd>Alemán</dd>
+        </div>
+        <div *ngIf="profesorDetail.idioma.japones">
+          <dd>Japonés</dd>
+        </div>
+        <div *ngIf="profesorDetail.idioma.coreano">
+          <dd>Coreano</dd>
+        </div>
+        <div *ngIf="profesorDetail.idioma.mandarin">
+          <dd>Mandarín</dd>
+        </div>
+        <hr />
         <dt>Costo del contrato</dt>
-        <dd *ngFor = "let a of profesorDetail.contratos">{{a.costo}}</dd>
-        <dt>Calificaciones</dt>
-        <dd *ngFor = "let a of profesorDetail.calificaciones">{{a.calificacionNumerica}}</dd>
+        <dd *ngFor="let a of profesorDetail.contratos">{{ a.costo }}</dd>
+        <hr />
+        <dt>Calificacion promedio</dt>
+        <dd *ngFor="let a of profesorDetail.calificaciones">
+          {{ a.calificacionNumerica }}
+        </dd>
+        <hr />
         <dt>Tipo Clases</dt>
-        <dd *ngFor = "let a of profesorDetail.clases">{{a.tipoClase}}</dd>
+        <dd *ngFor="let a of profesorDetail.clases">{{ a.tipoClase }}</dd>
+        <hr />
         <dt>Certificados</dt>
-        <dd><app-certificado [certificados]="profesorDetail.certificados"></app-certificado></dd>
+        <dd>
+          <app-certificado
+            [certificados]="profesorDetail.certificados"
+          ></app-certificado>
+        </dd>
       </dl>
     </div>
   </div>
