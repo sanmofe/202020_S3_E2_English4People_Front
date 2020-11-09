@@ -1,25 +1,27 @@
-<div class="container-fluid">
-  <div class="row p-2">
-    <div class="col-6">
-      <table class="table" summary="idiomas">
-        <thead>
-          <tr>
-            <th class="h4" scope="col">Id</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let i of idiomas">
-            <td>
-              <dd class="boton" (click)="onSelected(i)">{{ i.id }}</dd>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="col-6">
-      <div *ngIf="selected">
-        <app-idioma-detail [idiomaDetail]="selectedIdioma"></app-idioma-detail>
-      </div>
+<div class="row p-2">
+  <div class="col-2" *ngFor="let i of idiomas">
+    <ul>
+      <li>
+        <a
+          class="btn btn-light"
+          data-toggle="collapse"
+          href="#collapseExample"
+          role="button"
+          aria-expanded="false"
+          aria-controls="collapseExample"
+          (click)="onSelected(i)"
+        >
+          {{ i.id }}
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="col">
+    <div *ngIf="selected">
+      <app-idioma-detail
+        [idiomaDetail]="selectedIdioma"
+      ></app-idioma-detail>
     </div>
   </div>
 </div>

@@ -1,27 +1,27 @@
-<div class="container-fluid">
-  <div class="row p-2">
-    <div class="col-6">
-      <table class="table" summary="dias de la semana">
-        <thead>
-          <tr>
-            <th class="h4">Id</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let ds of diasSemana">
-            <td>
-              <dd class="boton" (click)="onSelected(ds)">{{ ds.id }}</dd>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="col-6">
-      <div *ngIf="selected">
-        <app-diaSemana-detail
-          [diaSemanaDetail]="selectedDiaSemana"
-        ></app-diaSemana-detail>
-      </div>
+<div class="row p-2">
+  <div class="col-2" *ngFor="let ds of diasSemana">
+    <ul>
+      <li>
+        <a
+          class="btn btn-light"
+          data-toggle="collapse"
+          href="#collapseExample"
+          role="button"
+          aria-expanded="false"
+          aria-controls="collapseExample"
+          (click)="onSelected(ds)"
+        >
+          {{ ds.id }}
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="col">
+    <div *ngIf="selected">
+      <app-diaSemana-detail
+        [diaSemanaDetail]="selectedDiaSemana"
+      ></app-diaSemana-detail>
     </div>
   </div>
 </div>
