@@ -1,11 +1,27 @@
 <div class="row p-2">
-  <div class="col-1" *ngFor="let p of profesores">
-    <a class="btn btn-light" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" (click)="onSelected(p)">
-      {{p.nombre}}
-    </a>
+  <div class="col-2" *ngFor="let p of profesores">
+    <ul>
+      <li>
+        <a
+          class="btn btn-light"
+          data-toggle="collapse"
+          href="#collapseExample"
+          role="button"
+          aria-expanded="false"
+          aria-controls="collapseExample"
+          (click)="onSelected(p)"
+        >
+          {{ p.nombre }}
+        </a>
+      </li>
+    </ul>
   </div>
-</div>
 
-<div *ngIf ="selected">
-    <app-profesor-detail [profesorDetail]="selectedProfesor"></app-profesor-detail>
+  <div class="col">
+    <div *ngIf="selected">
+      <app-profesor-detail
+        [profesorDetail]="selectedProfesor"
+      ></app-profesor-detail>
+    </div>
+  </div>
 </div>
