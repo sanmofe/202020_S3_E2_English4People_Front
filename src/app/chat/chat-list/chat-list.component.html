@@ -1,23 +1,28 @@
-<div class="container-fluid">
-  <div class="col-6">
-    <table class="table">
-      <thead>
-        <tr>
-          <th class="h1" scope="col">Id</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let c of chats">
-          <td>
-            <dd (click)="onSelected(c)">{{c.id}}</dd>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+<div class="row p-2">
+  <div class="col-2" *ngFor="let c of chats">
+    <ul>
+      <li>
+        <a
+          class="btn btn-light"
+          data-toggle="collapse"
+          href="#collapseExample"
+          role="button"
+          aria-expanded="false"
+          aria-controls="collapseExample"
+          (click)="onSelected(c)"
+        >
+          {{ c.id }}
+        </a>
+      </li>
+    </ul>
   </div>
-</div>
 
-<div *ngIf="selected">
-  <app-chat-detail [chatDetail]="selectedChat"></app-chat-detail>
+  <div class="col">
+    <div *ngIf="selected">
+      <app-chat-detail
+        [chatDetail]="selectedChat"
+      ></app-chat-detail>
+    </div>
+  </div>
 </div>
 

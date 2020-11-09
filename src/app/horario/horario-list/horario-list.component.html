@@ -1,22 +1,27 @@
-<div class="container-fluid">
-  <div class="col-6">
-    <table class="table">
-      <thead>
-        <tr>
-          <th class="h4" scope="col">Id</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let h of horarios">
-          <td>
-            <dd (click)="onSelected(h)">{{h.id}}</dd>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+<div class="row p-2">
+  <div class="col-2" *ngFor="let h of horarios">
+    <ul>
+      <li>
+        <a
+          class="btn btn-light"
+          data-toggle="collapse"
+          href="#collapseExample"
+          role="button"
+          aria-expanded="false"
+          aria-controls="collapseExample"
+          (click)="onSelected(h)"
+        >
+          {{ h.id }}
+        </a>
+      </li>
+    </ul>
   </div>
-</div>
 
-<div *ngIf="selected">
-  <app-horario-detail [horarioDetail]="selectedHorario"></app-horario-detail>
+  <div class="col">
+    <div *ngIf="selected">
+      <app-horario-detail
+        [horarioDetail]="selectedHorario"
+      ></app-horario-detail>
+    </div>
+  </div>
 </div>
