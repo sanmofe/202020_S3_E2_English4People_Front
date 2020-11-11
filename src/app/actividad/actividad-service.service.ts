@@ -3,6 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 import { Actividad } from './actividad';
 import { Observable } from 'rxjs';
+import { ActividadDetail } from './actividadDetail';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -13,6 +15,6 @@ export class ActividadServiceService {
 constructor(private http: HttpClient) { }
 getActividades(): Observable<Array<Actividad>>
 {
-  return this.http.get<Array<Actividad>>(this.apiUrl);
+  return this.http.get<Array<ActividadDetail>>(this.apiUrl);
 }
 }

@@ -1,3 +1,27 @@
-<p>
-  actividad-list works!
-</p>
+<div class="row p-2">
+  <div class="col-2" *ngFor="let acti of actividades">
+    <ul>
+      <li>
+        <a
+          class="btn btn-light"
+          data-toggle="collapse"
+          href="#collapseExample"
+          role="button"
+          aria-expanded="false"
+          aria-controls="collapseExample"
+          (click)="onSelected(acti)"
+        >
+          {{ acti.id }}
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="col">
+    <div *ngIf="selected">
+      <app-actividad-detail
+        [actividadDetail]="selectedActividad"
+      ></app-actividad-detail>
+    </div>
+  </div>
+</div>
