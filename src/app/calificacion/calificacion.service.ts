@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Calificacion } from './calificacion';
+import { CalificacionDetail } from './calificacionDetail';
 import { environment } from '../../environments/environment';
 
 @Injectable({
@@ -13,8 +13,8 @@ export class CalificacionService {
 
   constructor(private http: HttpClient) { }
 
-  getCalificaciones(): Observable<Calificacion[]>{
-    return this.http.get<Calificacion[]>(this.apiUrl);
+  getCalificaciones(): Observable<Array<CalificacionDetail>>{
+    return this.http.get<Array<CalificacionDetail>>(this.apiUrl);
   }
 
 }

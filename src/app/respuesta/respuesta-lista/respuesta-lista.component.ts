@@ -12,6 +12,10 @@ export class RespuestaListaComponent implements OnInit {
 
   constructor(private respuestaService: RespuestaService) { }
 
+  selected = false;
+
+  selectedRespuesta: Respuesta;
+
   respuestas: Array<Respuesta>;
 
   getRespuestas(): void {
@@ -19,6 +23,11 @@ export class RespuestaListaComponent implements OnInit {
       .subscribe(respuestas => {
         this.respuestas = respuestas;
       });
+  }
+
+  onSelected(r: Respuesta): void {
+    this.selected = true;
+    this.selectedRespuesta = r;
   }
 
   ngOnInit() {

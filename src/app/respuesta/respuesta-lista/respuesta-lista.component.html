@@ -1,24 +1,27 @@
-<div class="container-fluid">
-  <div class="col p-5">
-      <table class="table" summary="Respuestas">
-        <thead class="thead-dark">
-          <th scope="col">Comentario</th>
-          <th scope="col">Fecha</th>
-          <th scope="col">Calificacion</th>
-        </thead>
-        <tbody>
-          <tr *ngFor="let c of respuestas">
-            <td>
-              <dd>{{c.comentario}}</dd>
-            </td>
-            <td>
-              <dd>{{c.fecha}}</dd>
-            </td>
-            <td>
-              <dd>{{c.calificacion? c.calificacion: "no asignada"}}</dd>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+<div class="row p-2">
+  <div class="col-2" *ngFor="let r of respuestas">
+    <ul>
+      <li>
+        <a
+          class="btn btn-light"
+          data-toggle="collapse"
+          href="#collapseExample"
+          role="button"
+          aria-expanded="false"
+          aria-controls="collapseExample"
+          (click)="onSelected(r)"
+        >
+          {{ r.id }}
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="col">
+    <div *ngIf="selected">
+      <app-respuesta-detail
+        [respuestaDetail]="selectedRespuesta"
+      ></app-respuesta-detail>
+    </div>
   </div>
 </div>

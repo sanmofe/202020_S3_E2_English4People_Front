@@ -1,0 +1,6 @@
+<div class="container-fluid">
+  <h3>Calificación de {{calificacionDetail.nombreEstudiante}}</h3>
+  <p>Dada por el profesor: {{calificacionDetail.profesor.nombre}} en {{calificacionDetail.fecha}}</p>
+  <h2>Calificación: {{calificacionDetail.calificacionNumerica}}</h2>
+  <p><b>Respuesta: </b>{{calificacionDetail.respuestas?calificacionDetail.respuestas[0]:"No hay respuestas asociadas"}}</p>
+</div>
