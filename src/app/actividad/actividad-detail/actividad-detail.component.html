@@ -1,3 +1,25 @@
-<p>
-  actividad-detail works!
-</p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-2">
+      <div class="thumb">
+        <img class="img-fluid" />
+      </div>
+    </div>
+    <div class="col">
+      <dl>
+        <dt>id</dt>
+        <dd>{{actividadDetail.id}}</dd>
+        <dt>Estudiante</dt>
+        <dd>{{actividadDetail.Estudiante}}</dd>
+        <dt> Profesor</dt>
+        <dd>{{actividadDetail.Profesor}}</dd>
+
+        <hr>
+        <dt class="bold">Estudiante</dt>
+        <dd class="caption">{{actividadDetail.estudiante.nombre}}</dd>
+        <dt class="bold">Profesor</dt>
+        <dd class="caption">{{actividadDetail.profesor.nombre}}</dd>
+      </dl>
+    </div>
+  </div>
+</div>

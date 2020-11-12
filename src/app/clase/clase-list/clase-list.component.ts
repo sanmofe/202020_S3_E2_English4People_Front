@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Clase } from '../clase';
 import { ClaseServiceService} from '../clase-service.service';
+import { ClaseDetail } from '../claseDetail';
 
 @Component({
   selector: 'app-clase-list',
@@ -9,11 +10,20 @@ import { ClaseServiceService} from '../clase-service.service';
 })
 export class ClaseListComponent implements OnInit {
 
+  selectedClase: Clase;
+  selected = false;
+
+  onSelected(a: Clase): void {
+    this.selected = true;
+    this.selectedClase = a;
+  }
+
   constructor(private service: ClaseServiceService) { }
-  private clases : Array<Clase>
+  clases: Array<ClaseDetail>;
+
   getClases(): any
   {
-    return this.service.getClases().subscribe(c => this.clases = c);
+    return this.service.getClases().subscribe(cl => this.clases = cl);
   }
   ngOnInit() {
     this.getClases();

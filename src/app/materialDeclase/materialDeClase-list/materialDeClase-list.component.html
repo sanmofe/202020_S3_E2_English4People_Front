@@ -1,3 +1,27 @@
-<p>
-  materialDeClase-list works!
-</p>
+<div class="row p-2">
+  <div class="col-2" *ngFor="let mate of idiomas">
+    <ul>
+      <li>
+        <a
+          class="btn btn-light"
+          data-toggle="collapse"
+          href="#collapseExample"
+          role="button"
+          aria-expanded="false"
+          aria-controls="collapseExample"
+          (click)="onSelected(mate)"
+        >
+          {{ mate.id }}
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="col">
+    <div *ngIf="selected">
+      <app-materialDeClase-detail
+        [materialDeClaseDetail]="selectedMaterial"
+      ></app-materialDeClase-detail>
+    </div>
+  </div>
+</div>

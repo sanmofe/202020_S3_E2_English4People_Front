@@ -1,3 +1,27 @@
-<p>
-  clase-list works!
-</p>
+<div class="row p-2">
+  <div class="col-2" *ngFor="let cl of clases">
+    <ul>
+      <li>
+        <a
+          class="btn btn-light"
+          data-toggle="collapse"
+          href="#collapseExample"
+          role="button"
+          aria-expanded="false"
+          aria-controls="collapseExample"
+          (click)="onSelected(cl)"
+        >
+          {{ cl.id }}
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="col">
+    <div *ngIf="selected">
+      <app-clase-detail
+        [claseDetail]="selectedClase"
+      ></app-clase-detail>
+    </div>
+  </div>
+</div>

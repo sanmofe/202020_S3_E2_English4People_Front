@@ -10,12 +10,27 @@ import { MaterialDeClaseServiceService} from '../materialDeClase-service.service
 })
 export class MaterialDeClaseListComponent implements OnInit {
 
+  selectedMaterial: MaterialDeclase;
+  selected = false;
+
   constructor(private service: MaterialDeClaseServiceService) { }
+
   enlaces: Array<MaterialDeclase>;
+
   getEnlaces(): any{
-    return this.service.getEnlaces().subscribe(c => this.enlaces = c);
+    return this.service.getEnlaces().subscribe(mate => this.enlaces = mate);
   }
   ngOnInit() {
     this.getEnlaces();
   }
+
+  onSelected(mate: MaterialDeclase): void {
+    this.selected = true;
+    this.selectedMaterial = mate;
+    console.log(mate);
+  }
 }
+
+
+
+

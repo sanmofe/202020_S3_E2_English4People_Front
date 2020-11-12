@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 import { Clase } from './Clase';
 import { Observable } from 'rxjs';
+import { ClaseDetail } from './claseDetail';
 
 
 @Injectable({
@@ -13,7 +14,7 @@ export class ClaseServiceService {
   private apiUrl = environment.baseUrl + 'clases';
 
 constructor(private http: HttpClient) { }
-getClases(): Observable<Array<Clase>>{
-  return this.http.get<Array<Clase>>(this.apiUrl);
+getClases(): Observable<Array<ClaseDetail>>{
+  return this.http.get<Array<ClaseDetail>>(this.apiUrl);
 }
 }

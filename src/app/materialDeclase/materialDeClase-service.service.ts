@@ -9,9 +9,10 @@ import { Observable } from 'rxjs';
 })
 export class MaterialDeClaseServiceService {
 
-  private apiUrl = environment.baseUrl + 'enlace'; //revisar
+  private apiUrl = environment.baseUrl + 'materiales';
 
   constructor(private http: HttpClient) { }
+
   getEnlaces(): Observable<Array<MaterialDeclase>>{
     return this.http.get<Array<MaterialDeclase>>(this.apiUrl);
   }
