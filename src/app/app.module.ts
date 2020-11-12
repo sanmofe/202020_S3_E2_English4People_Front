@@ -14,6 +14,9 @@ import { CalificacionModule } from './calificacion/calificacion.module';
 import { RespuestaModule } from './respuesta/respuesta.module'
 import { IdiomaModule } from './idioma/idioma.module';
 import { DiaSemanaModule } from './diaSemana/diaSemana.module';
+import { ActividadModule } from './actividad/actividad.module';
+import { ClaseModule } from './clase/clase.module';
+import { MaterialDeclaseModule } from './MaterialDeClase/materialDeclase.module';
 
 @NgModule({
   declarations: [
@@ -32,6 +35,9 @@ import { DiaSemanaModule } from './diaSemana/diaSemana.module';
     CalificacionModule,
     RespuestaModule,
     DiaSemanaModule,
+    ActividadModule,
+    ClaseModule,
+    MaterialDeclaseModule,
     HttpClientModule
   ],
   providers: [],
