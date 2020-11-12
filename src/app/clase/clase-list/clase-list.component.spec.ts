@@ -46,7 +46,7 @@ describe('ClaseListComponent', () => {
       faker.lorem.sentence(),
       faker.lorem.sentence()
     );
-     /*component.clases = [
+     component.clases = [
       new ClaseDetail(
         faker.random.number(),
         faker.random.sentence(),
@@ -54,7 +54,7 @@ describe('ClaseListComponent', () => {
         estudiante,
         profesor
       ),
-    ];*/
+    ];
     fixture.detectChanges();
     debug = fixture.debugElement;
   });

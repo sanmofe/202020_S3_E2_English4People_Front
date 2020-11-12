@@ -1,5 +1,5 @@
 <div class="row p-2">
-  <div class="col-2" *ngFor="let mate of idiomas">
+  <div class="col-2" *ngFor="let mate of enlaces">
     <ul>
       <li>
         <a
@@ -19,9 +19,9 @@
 
   <div class="col">
     <div *ngIf="selected">
-      <app-materialDeClase-detail
+      <app-materialDeClase-Detail>
         [materialDeClaseDetail]="selectedMaterial"
-      ></app-materialDeClase-detail>
+      </app-materialDeClase-Detail>
     </div>
   </div>
 </div>
