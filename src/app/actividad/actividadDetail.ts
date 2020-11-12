@@ -1,5 +1,5 @@
 import {Actividad} from '../actividad/actividad';
-import {MaterialDeclase} from '../MaterialDeClase/materialDeClase';
+import {MaterialDeclase} from '../materialDeclase/materialDeClase';
 
 export class ActividadDetail extends Actividad{
 

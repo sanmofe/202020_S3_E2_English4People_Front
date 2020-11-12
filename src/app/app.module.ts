@@ -16,7 +16,7 @@ import { IdiomaModule } from './idioma/idioma.module';
 import { DiaSemanaModule } from './diaSemana/diaSemana.module';
 import { ActividadModule } from './actividad/actividad.module';
 import { ClaseModule } from './clase/clase.module';
-import { MaterialDeclaseModule } from './MaterialDeClase/materialDeclase.module';
+//import { MaterialDeclaseModule } from './materialDeclase/materialDeclase.module';
 
 @NgModule({
   declarations: [
@@ -37,7 +37,7 @@ import { MaterialDeclaseModule } from './MaterialDeClase/materialDeclase.module'
     DiaSemanaModule,
     ActividadModule,
     ClaseModule,
-    MaterialDeclaseModule,
+    //MaterialDeclaseModule,
     HttpClientModule
   ],
   providers: [],
