@@ -16,4 +16,8 @@ constructor(private http: HttpClient) {
 getProfesores():Observable<Array<ProfesorDetail>>{
   return this.http.get<Array<ProfesorDetail>>(this.apiUrl);
 }
+
+getProfesorDetail(profesorId): Observable<ProfesorDetail> {
+  return this.http.get<ProfesorDetail>(`${this.apiUrl}/${profesorId}`);
+}
 }
