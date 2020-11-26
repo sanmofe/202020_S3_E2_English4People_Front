@@ -21,19 +21,20 @@ export class IdiomaCreateComponent implements OnInit {
 
   ngOnInit() {
     this.idiomaForm = this.formBuilder.group({
-      espanol: ['', [Validators.required, Validators.maxLength(1)]],
-      ingles: ['', [Validators.required, Validators.maxLength(1)]],
-      frances: ['', [Validators.required, Validators.maxLength(1)]],
-      italiano: ['', [Validators.required, Validators.maxLength(1)]],
-      portugues: ['', [Validators.required, Validators.maxLength(1)]],
-      aleman: ['', [Validators.required, Validators.maxLength(1)]],
-      japones: ['', [Validators.required, Validators.maxLength(1)]],
-      coreano: ['', [Validators.required, Validators.maxLength(1)]],
-      mandarin: ['', [Validators.required, Validators.maxLength(1)]]
+      espanol: ['', [Validators.required, Validators.maxLength(5)]],
+      ingles: ['', [Validators.required, Validators.maxLength(5)]],
+      frances: ['', [Validators.required, Validators.maxLength(5)]],
+      italiano: ['', [Validators.required, Validators.maxLength(5)]],
+      portugues: ['', [Validators.required, Validators.maxLength(5)]],
+      aleman: ['', [Validators.required, Validators.maxLength(5)]],
+      japones: ['', [Validators.required, Validators.maxLength(5)]],
+      coreano: ['', [Validators.required, Validators.maxLength(5)]],
+      mandarin: ['', [Validators.required, Validators.maxLength(5)]]
     });
   }
 
   createIdioma(idioma: Idioma) {
+    console.log(idioma.espanol);
     this.idiomaService.createIdioma(idioma)
       .subscribe(idioma => {
         this.toastrService.success('El idioma fue creado');
