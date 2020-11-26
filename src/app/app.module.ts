@@ -33,7 +33,6 @@ import { ClaseModule } from './clase/clase.module';
       preventDuplicates: true,
     }),
     BrowserAnimationsModule,
-
     EstudianteModule,
     ChatModule,
     MensajeModule,
@@ -46,7 +45,7 @@ import { ClaseModule } from './clase/clase.module';
     RespuestaModule,
     DiaSemanaModule,
     ActividadModule,
-    ClaseModule,
+    ClaseModule
     //MaterialDeclaseModule,
   ],
   providers: [],
