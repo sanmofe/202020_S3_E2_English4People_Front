@@ -20,4 +20,9 @@ getProfesores():Observable<Array<ProfesorDetail>>{
 getProfesorDetail(profesorId): Observable<ProfesorDetail> {
   return this.http.get<ProfesorDetail>(`${this.apiUrl}/${profesorId}`);
 }
+
+createProfesor(profesor: Profesor): Observable<Profesor> {
+  return this.http.post<Profesor>(environment.baseUrl + 'profesor', profesor);
+}
+
 }
