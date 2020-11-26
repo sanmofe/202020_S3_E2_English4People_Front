@@ -12,8 +12,17 @@ export class ContratoServiceService {
 
   private apiUrl = environment.baseUrl + 'contratos';
 
-constructor(private http: HttpClient) { }
-getContratos(): Observable<Array<ContratoDetail>>{
-  return this.http.get<Array<ContratoDetail>>(this.apiUrl);
+  constructor(private http: HttpClient) { }
+
+  getContratos(): Observable<Array<ContratoDetail>>{
+    return this.http.get<Array<ContratoDetail>>(this.apiUrl);
+  }
+
+  createContrato(contrato: Contrato): Observable<Contrato> {
+    return this.http.post<Contrato>(environment.baseUrl + 'contratos', contrato);
+  }
 }
-}
+
+
+
+

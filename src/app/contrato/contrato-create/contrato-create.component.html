@@ -1,0 +1,38 @@
+<form [formGroup]="contratoForm" (ngSubmit)="!contratoForm.invalid && createContrato(contratoForm.value)">
+
+  <div class="form-group mx-sm-3 mb-2">
+    <label for="numeroHoras">
+        Numero de horas
+    </label>
+    <input novalidate id="numeroHoras" class="form-control" formControlName="numeroHoras" placeholder="Numero de horas">
+    <div class="alert alert-danger alert-dismissible fade show"
+        *ngIf="contratoForm.get('numeroHoras').hasError('required') && contratoForm.get('numeroHoras').touched">
+        Numero de horas requerido
+    </div>
+</div>
+
+<div class="form-group mx-sm-3 mb-2">
+  <label for="costo">
+      Costo
+  </label>
+  <input novalidate id="costo" class="form-control" formControlName="costo" placeholder="Costo">
+  <div class="alert alert-danger alert-dismissible fade show"
+      *ngIf="contratoForm.get('costo').hasError('required') && contratoForm.get('costo').touched">
+      Costo requerido
+  </div>
+</div>
+
+<div class="form-group mx-sm-3 mb-2">
+  <label for="medioPago">
+      Medio de pago
+  </label>
+  <input novalidate id="medioPago" type="text" class="form-control" formControlName="medioPago" placeholder="Medio de pago">
+  <div class="alert alert-danger alert-dismissible fade show"
+      *ngIf="contratoForm.get('medioPago').hasError('required') && contratoForm.get('medioPago').touched">
+      Medio de pago requerido
+  </div>
+</div>
+
+  <button type="submit" class="btn btn-primary" [disabled]="!contratoForm.valid">Create</button>
+  <button type="button" class="btn btn-danger ml-3" (click)="cancelCreation()">Cancel</button>
+</form>

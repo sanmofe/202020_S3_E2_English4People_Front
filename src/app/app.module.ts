@@ -1,13 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { EstudianteModule}  from './estudiante/estudiante.module';
 import { MensajeModule } from './mensaje/mensaje.module'
 import { ChatModule } from './chat/chat.module'
 import {ProfesorModule} from './profesor/profesor.module';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { ContratoModule } from './contrato/contrato.module';
 import { HorarioModule } from './horario/horario.module';
 import { CalificacionModule } from './calificacion/calificacion.module';
@@ -24,6 +26,14 @@ import { ClaseModule } from './clase/clase.module';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
+    ToastrModule.forRoot({
+      timeOut: 10000,
+      positionClass: 'toast-bottom-right',
+      preventDuplicates: true,
+    }),
+    BrowserAnimationsModule,
+
     EstudianteModule,
     ChatModule,
     MensajeModule,
@@ -38,7 +48,6 @@ import { ClaseModule } from './clase/clase.module';
     ActividadModule,
     ClaseModule,
     //MaterialDeclaseModule,
-    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
