@@ -1,3 +1,104 @@
-<p>
-  idioma-create works!
-</p>
+<form [formGroup]="idiomaForm" (ngSubmit)="!idiomaForm.invalid && createIdioma(idiomaForm.value)">
+
+  <div class="form-group mx-sm-3 mb-2">
+    <label for="espanol">
+        Habla español? '1' para sí y '0' para no
+    </label>
+    <input novalidate id="espanol" class="form-control" formControlName="espanol" placeholder="Español">
+    <div class="alert alert-danger alert-dismissible fade show"
+        *ngIf="idiomaForm.get('espanol').hasError('required') && idiomaForm.get('espanol').touched">
+        Debe indicar si habla o no español.
+    </div>
+  </div>
+
+    <div class="form-group mx-sm-3 mb-2">
+    <label for="ingles">
+        Habla inglés? '1' para sí y '0' para no
+    </label>
+    <input novalidate id="ingles" class="form-control" formControlName="ingles" placeholder="Ingles">
+    <div class="alert alert-danger alert-dismissible fade show"
+        *ngIf="idiomaForm.get('ingles').hasError('required') && idiomaForm.get('ingles').touched">
+        Debe indicar si habla o no inglés.
+    </div>
+  </div>
+
+  <div class="form-group mx-sm-3 mb-2">
+    <label for="frances">
+        Habla francés? '1' para sí y '0' para no
+    </label>
+    <input novalidate id="frances" class="form-control" formControlName="frances" placeholder="Frances">
+    <div class="alert alert-danger alert-dismissible fade show"
+        *ngIf="idiomaForm.get('frances').hasError('required') && idiomaForm.get('frances').touched">
+        Debe indicar si habla o no francés.
+    </div>
+  </div>
+
+  <div class="form-group mx-sm-3 mb-2">
+    <label for="italiano">
+        Habla italiano? '1' para sí y '0' para no
+    </label>
+    <input novalidate id="italiano" class="form-control" formControlName="italiano" placeholder="Italiano">
+    <div class="alert alert-danger alert-dismissible fade show"
+        *ngIf="idiomaForm.get('italiano').hasError('required') && idiomaForm.get('italiano').touched">
+        Debe indicar si habla o no italiano.
+    </div>
+  </div>
+
+  <div class="form-group mx-sm-3 mb-2">
+    <label for="portugues">
+        Habla portugués? '1' para sí y '0' para no
+    </label>
+    <input novalidate id="portugues" class="form-control" formControlName="portugues" placeholder="Portugues">
+    <div class="alert alert-danger alert-dismissible fade show"
+        *ngIf="idiomaForm.get('portugues').hasError('required') && idiomaForm.get('portugues').touched">
+        Debe indicar si habla o no portugues.
+    </div>
+  </div>
+
+  <div class="form-group mx-sm-3 mb-2">
+    <label for="aleman">
+        Habla alemán? '1' para sí y '0' para no
+    </label>
+    <input novalidate id="aleman" class="form-control" formControlName="aleman" placeholder="Aleman">
+    <div class="alert alert-danger alert-dismissible fade show"
+        *ngIf="idiomaForm.get('aleman').hasError('required') && idiomaForm.get('aleman').touched">
+        Debe indicar si habla o no alemán.
+    </div>
+  </div>
+
+  <div class="form-group mx-sm-3 mb-2">
+    <label for="japones">
+        Habla japonés? '1' para sí y '0' para no
+    </label>
+    <input novalidate id="japones" class="form-control" formControlName="japones" placeholder="Japones">
+    <div class="alert alert-danger alert-dismissible fade show"
+        *ngIf="idiomaForm.get('japones').hasError('required') && idiomaForm.get('japones').touched">
+        Debe indicar si habla o no japonés.
+    </div>
+  </div>
+
+  <div class="form-group mx-sm-3 mb-2">
+    <label for="coreano">
+        Habla coreano? '1' para sí y '0' para no
+    </label>
+    <input novalidate id="coreano" class="form-control" formControlName="coreano" placeholder="Coreano">
+    <div class="alert alert-danger alert-dismissible fade show"
+        *ngIf="idiomaForm.get('coreano').hasError('required') && idiomaForm.get('coreano').touched">
+        Debe indicar si habla o no coreano.
+    </div>
+  </div>
+
+  <div class="form-group mx-sm-3 mb-2">
+    <label for="espanol">
+        Habla mandarin? '1' para sí y '0' para no
+    </label>
+    <input novalidate id="mandarin" class="form-control" formControlName="mandarin" placeholder="Mandarin">
+    <div class="alert alert-danger alert-dismissible fade show"
+        *ngIf="idiomaForm.get('mandarin').hasError('required') && idiomaForm.get('mandarin').touched">
+        Debe indicar si habla o no mandarin.
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary" [disabled]="!idiomaForm.valid">Create</button>
+  <button type="button" class="btn btn-danger ml-3" (click)="cancelCreation()">Cancel</button>
+</form>

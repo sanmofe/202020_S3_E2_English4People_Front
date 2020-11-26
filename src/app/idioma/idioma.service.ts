@@ -15,4 +15,8 @@ export class IdiomaService {
   getIdiomas(): Observable<Idioma[]> {
     return this.http.get<Idioma[]>(this.apiUrl);
   }
+
+  createIdioma(idioma: Idioma): Observable<Idioma> {
+    return this.http.post<Idioma>(environment.baseUrl + 'idiomas', idioma);
+  }
 }
