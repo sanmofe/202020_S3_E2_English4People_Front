@@ -37,5 +37,6 @@ export class ContratoCreateComponent implements OnInit {
       }, err => {
         this.toastrService.error(err, 'Error');
       });
+    alert("El contrato fue creado satisfactoriamente!");
   }
 }

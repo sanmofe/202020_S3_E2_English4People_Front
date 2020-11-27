@@ -1,0 +1,87 @@
+<div class="container-fluid">
+	<div class="col-4 p-3">
+
+<form [formGroup]="diaSemanaForm" (ngSubmit)="!diaSemanaForm.invalid && createDiaSemana(diaSemanaForm.value)">
+
+  <div class="form-group mx-sm-3 mb-2">
+    <label for="lunes">
+        Hay clase el lunes? 'true' para sí y 'false' para no
+    </label>
+    <input novalidate id="lunes" class="form-control" formControlName="lunes" placeholder="Lunes">
+    <div class="alert alert-danger alert-dismissible fade show"
+        *ngIf="diaSemanaForm.get('lunes').hasError('required') && diaSemanaForm.get('lunes').touched">
+        Debe indicar si hay clase el lunes o no.
+    </div>
+  </div>
+
+  <div class="form-group mx-sm-3 mb-2">
+    <label for="martes">
+        Hay clase el martes? 'true' para sí y 'false' para no
+    </label>
+    <input novalidate id="martes" class="form-control" formControlName="martes" placeholder="Martes">
+    <div class="alert alert-danger alert-dismissible fade show"
+        *ngIf="diaSemanaForm.get('martes').hasError('required') && diaSemanaForm.get('martes').touched">
+        Debe indicar si hay clase el martes o no.
+    </div>
+  </div>
+
+  <div class="form-group mx-sm-3 mb-2">
+    <label for="miercoles">
+        Hay clase el miercoles? 'true' para sí y 'false' para no
+    </label>
+    <input novalidate id="miercoles" class="form-control" formControlName="miercoles" placeholder="Miercoles">
+    <div class="alert alert-danger alert-dismissible fade show"
+        *ngIf="diaSemanaForm.get('miercoles').hasError('required') && diaSemanaForm.get('miercoles').touched">
+        Debe indicar si hay clase el miercoles o no.
+    </div>
+  </div>
+
+  <div class="form-group mx-sm-3 mb-2">
+    <label for="jueves">
+        Hay clase el jueves? 'true' para sí y 'false' para no
+    </label>
+    <input novalidate id="jueves" class="form-control" formControlName="jueves" placeholder="Jueves">
+    <div class="alert alert-danger alert-dismissible fade show"
+        *ngIf="diaSemanaForm.get('jueves').hasError('required') && diaSemanaForm.get('jueves').touched">
+        Debe indicar si hay clase el jueves o no.
+    </div>
+  </div>
+
+  <div class="form-group mx-sm-3 mb-2">
+    <label for="viernes">
+        Hay clase el viernes? 'true' para sí y 'false' para no
+    </label>
+    <input novalidate id="viernes" class="form-control" formControlName="viernes" placeholder="Viernes">
+    <div class="alert alert-danger alert-dismissible fade show"
+        *ngIf="diaSemanaForm.get('viernes').hasError('required') && diaSemanaForm.get('viernes').touched">
+        Debe indicar si hay clase el viernes o no.
+    </div>
+  </div>
+
+  <div class="form-group mx-sm-3 mb-2">
+    <label for="sabado">
+        Hay clase el sabado? 'true' para sí y 'false' para no
+    </label>
+    <input novalidate id="sabado" class="form-control" formControlName="sabado" placeholder="Sabado">
+    <div class="alert alert-danger alert-dismissible fade show"
+        *ngIf="diaSemanaForm.get('sabado').hasError('required') && diaSemanaForm.get('sabado').touched">
+        Debe indicar si hay clase el sabado o no.
+    </div>
+  </div>
+
+  <div class="form-group mx-sm-3 mb-2">
+    <label for="domingo">
+        Hay clase el domingo? 'true' para sí y 'false' para no
+    </label>
+    <input novalidate id="domingo" class="form-control" formControlName="domingo" placeholder="Domingo">
+    <div class="alert alert-danger alert-dismissible fade show"
+        *ngIf="diaSemanaForm.get('domingo').hasError('required') && diaSemanaForm.get('domingo').touched">
+        Debe indicar si hay clase el domingo o no.
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary" [disabled]="!diaSemanaForm.valid">Create</button>
+  <button type="button" class="btn btn-danger ml-3" (click)="cancelCreation()">Cancel</button>
+</form>
+</div>
+</div>

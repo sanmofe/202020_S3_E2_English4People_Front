@@ -8,12 +8,15 @@ import { environment } from '../../environments/environment';
   providedIn: 'root',
 })
 export class DiaSemanaService {
-
   private apiUrl = environment.baseUrl + 'diasSemana';
 
-  constructor (private http: HttpClient) {}
+  constructor(private http: HttpClient) {}
 
   getDiasSemana(): Observable<DiaSemana[]> {
     return this.http.get<DiaSemana[]>(this.apiUrl);
-}
+  }
+
+  createDiaSemana(diaSemana: DiaSemana): Observable<DiaSemana> {
+    return this.http.post<DiaSemana>(environment.baseUrl + 'diasSemana', diaSemana);
+  }
 }

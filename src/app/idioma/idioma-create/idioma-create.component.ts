@@ -12,6 +12,8 @@ import { IdiomaService } from '../idioma.service';
 export class IdiomaCreateComponent implements OnInit {
   idiomaForm: FormGroup;
 
+  idioma: Idioma;
+
   constructor(private formBuilder: FormBuilder, private toastrService: ToastrService, private idiomaService: IdiomaService) {}
 
   cancelCreation(): void {
@@ -34,13 +36,14 @@ export class IdiomaCreateComponent implements OnInit {
   }
 
   createIdioma(idioma: Idioma) {
-    console.log(idioma.espanol);
     this.idiomaService.createIdioma(idioma)
       .subscribe(idioma => {
-        this.toastrService.success('El idioma fue creado');
+        this.idioma = idioma;
+        this.toastrService.success('El idioma fue creado!');
         this.idiomaForm.reset()
       }, err => {
         this.toastrService.error(err, 'Error');
       });
+      alert("El idioma fue creado satisfactoriamente!");
   }
 }

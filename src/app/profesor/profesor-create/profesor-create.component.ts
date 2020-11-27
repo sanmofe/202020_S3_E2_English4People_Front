@@ -42,6 +42,7 @@ export class ProfesorCreateComponent implements OnInit {
       }, err => {
         this.toastrService.error(err, 'Error');
       });
+      alert("El profesor fue creado satisfactoriamente!");
   }
 
 }

@@ -1,3 +1,6 @@
+<div class="container-fluid">
+	<div class="col-4 p-3">
+
 <form [formGroup]="contratoForm" (ngSubmit)="!contratoForm.invalid && createContrato(contratoForm.value)">
 
   <div class="form-group mx-sm-3 mb-2">
@@ -36,3 +39,5 @@
   <button type="submit" class="btn btn-primary" [disabled]="!contratoForm.valid">Create</button>
   <button type="button" class="btn btn-danger ml-3" (click)="cancelCreation()">Cancel</button>
 </form>
+</div>
+</div>
