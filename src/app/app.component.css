@@ -1,7 +1,12 @@
 #principal{
-  background-color: #6CA6C1;
+  background-color: #01A7E1;
 }
 
 html{
   background-color: #FFD23F!important;
+}
+
+#logo{
+  width:  10%;
+  height: 10%;
 }

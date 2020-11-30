@@ -1,15 +1,16 @@
 
-<nav class="navbar navbar-expand-lg" id="principal"><span class="navbar-brand mb-0 h1">English4people</span></nav>
+<nav class="navbar navbar-expand-lg" id="principal">
+  <a class="navbar-brand" href="#">
+    <img src="../assets/logoEFP.PNG" alt="logochido" id="logo">
+  </a>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" routerLink="profesores/list">Profesores</a>
+    </div>
+  </div>
+</nav>
 
-<div class="navbar-nav mr-auto mt-0">
-  <a id="profesores-navbar-item" class="nav-item nav-link" routerLink="/profesores/list">Profesores</a>
-</div>
 
-<div class="content-wrapper">
-<div class="content">
-  <router-outlet></router-outlet>
-</div>
-</div>
 
 <br>
 <h3>Creación de Profesor:</h3>
@@ -27,6 +28,9 @@
 <h3>Creación de DiaSemana:</h3>
 <app-diaSemana-create></app-diaSemana-create>
 
+<br>
+<h3>Creación de Calificación:</h3>
+<app-calificacion-create></app-calificacion-create>
 <!--
 <app-profesor-create></app-profesor-create>
 <app-contrato-create></app-contrato-create>
