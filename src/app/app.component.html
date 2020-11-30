@@ -1,219 +1,130 @@
-<!--
-<nav class="navbar navbar-expand-lg navbar-light">
-  <a class="navbar-brand" href="#">
-    <div class="form-inline">
-      <img
-        id="logo"
-        src="../assets/booksIcon.png"
-        class="center-block"
-        width="100"
-        height="100"
-      />
-      <div class="col">
-        <div class="row-sm-4">
-          <h2 class="mainTitle f1">B O O K L Y</h2>
-        </div>
-        <div class="row-sm-3">
-          <h5 class="mainTitle f1">A World of Books at Home</h5>
+<body>
+  <header>
+   <nav>
+     <ul>
+	    <li><img class="photo" src="../assets/logoEFP.PNG" /></li>
+	      <li><a href="">Inicio</a></li>
+        <li><a
+          class="dropdown-item"
+          [routerLink]="['/profesores/list']"
+          >Conoce a nuestros profesores</a
+        ></li>
+        <li><a href="#">Horarios disponibles</a></li>
+        <li><a class="dropdown-item" [routerLink]="['/profesores/create']"
+          >Crear una cuenta</a
+        ></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container" id="contenido">
+    <div class="row">
+      <div class="col-md-10">
+        <div>
+          <router-outlet></router-outlet>
         </div>
       </div>
     </div>
-  </a>
 
-  <button
-    class="navbar-toggler"
-    type="button"
-    data-toggle="collapse"
-    data-target="#navbarSupportedContent"
-    aria-controls="navbarSupportedContent"
-    aria-expanded="false"
-    aria-label="Toggle navigation"
-  >
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item dropdown">
-        <a
-          class="nav-link dropdown-toggle"
-          href="#"
-          id="navbarDropdown"
-          role="button"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false"
-          >Profesores</a
-        >
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a
-            class="dropdown-item"
-            [routerLink]="['/profesores/list']"
-            [queryParams]="{ allBooks: 'true' }"
-            >All books</a
-          >
-          <a class="dropdown-item" [routerLink]="['/books/create']"
-            >Create Book</a
-          >
+    <div class="row">
+      <div class="col-8" id="columna">
+        <h2>Acerca de la empresa</h2>
+        <img class="photo2" src="https://www.universidadesvirtuales.com.co/img/article/aprender-idiomas-virtual-en-colombia" />
+        <p>
+          En la actualidad es de gran interes para las personas el aprendizaje de idiomas, pero hay muchas
+          personas que prefieren las clases personalizadas con profesores particulares y puede que no haya
+          mucha variedad de empresas a las cuales acudir. Ademas, la busqueda de profesores que cumplan las
+          expectativas puede ser una tarea dificil y tediosa.
+        </p>
+        <p>
+          Para solucionar dicha problematica se creó la plataforma English4People que acerca a profesores
+          de idiomas y estudiantes. Esta empresa brinda un servicio completo y rapido ya que cuenta con
+          un gran numero de herramientas que permiten que el servicio sea el mejor posible.
+        </p>
+      </div>
+      <div class="col" id="columna">
+        <h2>Siguenos en nuestras redes</h2>
+        <div class="row" id="semicol">
+          <div class="col-2">
+            <img
+            class="photo1"
+            src="https://icomoon.io/iconsabf18a1/12/132.svg"
+            />
+          </div>
+          <div class="col">
+            <img class="photo1"
+            src="https://icomoon.io/iconsabf18a1/2/1520.png"
+            />
+          </div>
         </div>
-      </li>
-    </ul>
+        <h2>Contactanos</h2>
+        <div class="row">
+          <div class="col-2">
+            <dl>
+              <dt>Tel</dt>
+              <dd>+571234567</dd>
+              <dt>Cel</dt>
+              <dd>3101010101</dd>
+              <dt>Correo</dt>
+              <dd>english4people@gmail.com</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</nav>
 
-<div class="container-fluid" id="principal">
-  <div class="row">
-    <div class="col-md-10">
-      <div>
-        <router-outlet></router-outlet>
+  <div class="container" id="fin">
+    <div class="row">
+      <div class="col" id="columna">
+        <h2>Como funciona</h2>
+        <h4>
+          English4People cuenta con una interfaz facil de entender para todos los usuarios.
+        </h4>
+        <div class="row">
+          <div class="col" id="columna">
+            <h3>Profesores</h3>
+            <p>
+              Los profesores se registran en la plataforma diligenciando datos como su nombre, su
+              formación académica, los idiomas que domina, sus certificados, y videos
+              breves con ejemplos de algunas de sus clases. Los profesores podrán editar su agenda para
+              establecer las franjas horarias en las que están disponibles y podran publicar el
+              material académico, al que tendrán acceso únicamente los estudiantes que tomen el curso
+              con ese profesor.
+            </p>
+            <p>
+              Los profesores también podrán publicar actividades relacionadas con el aprendizaje de
+              idiomas, como por ejemplo clubes de conversación, de lectura, viajes de inmersión, cine
+              foros, entre otros.
+            </p>
+          </div>
+          <div class="col" id="columna">
+            <h3>Estudiantes</h3>
+            <p>
+              Los estudiantes usarán la plataforma para filtrar profesores y buscar aquellos que cumplan
+              con determinados criterios. Si en la búsqueda hay algún resultado coincidente, el estudiante
+              podrá contactar al profesor (desde la misma plataforma) y realizar el proceso de
+              contratación. En el contrato deberán estipular el número de horas, el costo y el horario.
+              En la plataforma los estudiantes también podrán inscribirse a las actividades extra
+              ofertadas por los profesores.
+            </p>
+            <p>
+              La plataforma tendrá un componente de red social, por lo cual, los estudiantes que hayan
+              contratado a un profesor, podrán comentarlo y calificarlo. De igual forma, el profesor
+              podrá responder a las calificaciones y comentarios. Los profesores mejor calificados
+              aparecerán destacados en los filtros y búsquedas.
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="col-md-2 border border-light" id="secundaria">
-      <div id="textWhite"></div>
     </div>
   </div>
-</div>
 
-<footer class="page-footer bg-light">
-  <div class="footer-copyright text-center py-2">
-    © Ejemplo Desarrollo de SW en Equipos
-    <a
-      [routerLink]="['/books/list']"
-      [queryParams]="{ allBooks: 'true' }"
-      id="colorFooterText2"
-    >
-      Bookly</a
-    >
-  </div>
-</footer>
--->
-  <body>
-    <header>
-	    <nav>
-	      <ul>
-			    <li><img class="photo" src="../assets/logoEFP.PNG" /></li>
-		      <li><a href="">Inicio</a></li>
-          <li><a
-            class="dropdown-item"
-            [routerLink]="['/profesores/list']"
-            >Conoce a nuestros profesores</a
-          ></li>
-          <li><a href="#">Horarios disponibles</a></li>
-          <li><a class="dropdown-item" [routerLink]="['/profesores/create']"
-            >Crear una cuenta</a
-          ></li>
-	      </ul>
-      </nav>
-    </header>
-
-    <div class="container" id="contenido">
-      <div class="row">
-        <div class="col-md-10">
-          <div>
-            <router-outlet></router-outlet>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-8" id="columna">
-          <h2>Acerca de la empresa</h2>
-          <img class="photo2" src="https://www.universidadesvirtuales.com.co/img/article/aprender-idiomas-virtual-en-colombia" />
-          <p>
-            En la actualidad es de gran interes para las personas el aprendizaje de idiomas, pero hay muchas
-            personas que prefieren las clases personalizadas con profesores particulares y puede que no haya
-            mucha variedad de empresas a las cuales acudir. Ademas, la busqueda de profesores que cumplan las
-            expectativas puede ser una tarea dificil y tediosa.
-          </p>
-          <p>
-            Para solucionar dicha problematica se creó la plataforma English4People que acerca a profesores
-            de idiomas y estudiantes. Esta empresa brinda un servicio completo y rapido ya que cuenta con
-            un gran numero de herramientas que permiten que el servicio sea el mejor posible.
-          </p>
-        </div>
-        <div class="col" id="columna">
-          <h2>Siguenos en nuestras redes</h2>
-          <div class="row" id="semicol">
-            <div class="col-2">
-              <img
-              class="photo1"
-              src="https://icomoon.io/iconsabf18a1/12/132.svg"
-              />
-            </div>
-            <div class="col">
-              <img class="photo1"
-              src="https://icomoon.io/iconsabf18a1/2/1520.png"
-              />
-            </div>
-          </div>
-          <h2>Contactanos</h2>
-          <div class="row">
-            <div class="col-2">
-              <dl>
-                <dt>Tel</dt>
-                <dd>+571234567</dd>
-                <dt>Cel</dt>
-                <dd>3101010101</dd>
-                <dt>Correo</dt>
-                <dd>english4people@gmail.com</dd>
-              </dl>
-            </div>
-          </div>
-        </div>
-      </div>
+  <footer class="page-footer bg-light">
+    <div class="footer-copyright text-center py-2">
+      © Proyecto Desarrollo de SW en Equipos
     </div>
-
-    <div class="container" id="fin">
-      <div class="row">
-        <div class="col" id="columna">
-          <h2>Como funciona</h2>
-          <h4>
-            English4People cuenta con una interfaz facil de entender para todos los usuarios.
-          </h4>
-          <div class="row">
-            <div class="col" id="columna">
-              <h3>Profesores</h3>
-              <p>
-                Los profesores se registran en la plataforma diligenciando datos como su nombre, su
-                formación académica, los idiomas que domina, sus certificados, y videos
-                breves con ejemplos de algunas de sus clases. Los profesores podrán editar su agenda para
-                establecer las franjas horarias en las que están disponibles y podran publicar el
-                material académico, al que tendrán acceso únicamente los estudiantes que tomen el curso
-                con ese profesor.
-              </p>
-              <p>
-                Los profesores también podrán publicar actividades relacionadas con el aprendizaje de
-                idiomas, como por ejemplo clubes de conversación, de lectura, viajes de inmersión, cine
-                foros, entre otros.
-              </p>
-            </div>
-            <div class="col" id="columna">
-              <h3>Estudiantes</h3>
-              <p>
-                Los estudiantes usarán la plataforma para filtrar profesores y buscar aquellos que cumplan
-                con determinados criterios. Si en la búsqueda hay algún resultado coincidente, el estudiante
-                podrá contactar al profesor (desde la misma plataforma) y realizar el proceso de
-                contratación. En el contrato deberán estipular el número de horas, el costo y el horario.
-                En la plataforma los estudiantes también podrán inscribirse a las actividades extra
-                ofertadas por los profesores.
-              </p>
-              <p>
-                La plataforma tendrá un componente de red social, por lo cual, los estudiantes que hayan
-                contratado a un profesor, podrán comentarlo y calificarlo. De igual forma, el profesor
-                podrá responder a las calificaciones y comentarios. Los profesores mejor calificados
-                aparecerán destacados en los filtros y búsquedas.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <footer class="page-footer bg-light">
-      <div class="footer-copyright text-center py-2">
-        © Proyecto Desarrollo de SW en Equipos
-      </div>
-    </footer>
-  </body>
+  </footer>
+</body>
 
 
