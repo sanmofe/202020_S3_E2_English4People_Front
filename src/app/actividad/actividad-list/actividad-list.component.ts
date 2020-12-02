@@ -10,15 +10,15 @@ import { ActividadDetail} from '../actividadDetail';
 })
 export class ActividadListComponent implements OnInit {
 
+  selectedActividad: ActividadDetail;
+  selected = false;
+
+  onSelected(acti: ActividadDetail):void{
+   this.selected = true;
+   this.selectedActividad = acti;
+  }
   constructor(private service: ActividadServiceService) { }
    actividades: Array<Actividad>
-   selectedActividad: ActividadDetail;
-   selected = false;
-
-   onSelected(acti: ActividadDetail):void{
-    this.selected = true;
-    this.selectedActividad = acti;
-  }
 
   getActividades():any
   {

@@ -1,15 +1,18 @@
+import { MaterialDeclase } from '../materialDeclase/materialDeClase';
 export class Actividad{
 
   id:number;
-  tipo:string;
+  tipoActividad:string;
   descripcion:string;
   fecha: Date;
+  materialDeClase: MaterialDeclase;
 
-  constructor(id: number, tipo:string, descripcion:string, fecha:Date)
+  constructor(id: number, tipoActividad:string, descripcion:string, fecha:Date,  materialDeClase: MaterialDeclase)
   {
     this.id = id;
-    this.tipo = tipo;
+    this.tipoActividad = tipoActividad;
     this.descripcion = descripcion;
     this.fecha = fecha;
+    this.materialDeClase = materialDeClase;
   }
 }

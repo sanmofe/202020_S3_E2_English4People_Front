@@ -1,0 +1,65 @@
+<div class="container-fluid">
+	<div class="col-4 p-3">
+
+<form [formGroup]="claseForm" (ngSubmit)="!claseForm.invalid && createClase(claseForm.value)">
+
+  <div class="form-group mx-sm-3 mb-2">
+    <label for="fecha">
+      fecha
+    </label>
+    <input novalidate id="fecha" class="form-control" formControlName="fecha" placeholder="fecha">
+    <div class="alert alert-danger alert-dismissible fade show"
+        *ngIf="claseForm.get('fecha').hasError('required') && claseForm.get('fecha').touched">
+        fecha requerida
+    </div>
+</div>
+
+<div class="form-group mx-sm-3 mb-2">
+  <label for="tipoClase">
+    tipoClase
+  </label>
+  <input novalidate id="tipoClase" class="form-control" formControlName="tipoClase" placeholder="tipo de clase">
+  <div class="alert alert-danger alert-dismissible fade show"
+      *ngIf="claseForm.get('tipoClase').hasError('required') && claseForm.get('tipoClase').touched">
+      tipoClase requerido
+  </div>
+</div>
+
+<div class="form-group mx-sm-3 mb-2">
+  <label for="profesor">
+    profesor
+  </label>
+  <input novalidate id="profesor" type="text" class="form-control" formControlName="profesor" placeholder="profesor">
+  <div class="alert alert-danger alert-dismissible fade show"
+      *ngIf="claseForm.get('profesor').hasError('required') && claseForm.get('profesor').touched">
+      profesor requerido
+  </div>
+</div>
+
+<div class="form-group mx-sm-3 mb-2">
+  <label for="estudiante">
+    estudiante
+  </label>
+  <input novalidate id="estudiante" class="form-control" formControlName="estudiante" placeholder="estudiante">
+  <div class="alert alert-danger alert-dismissible fade show"
+      *ngIf="claseForm.get('estudiante').hasError('required') && claseForm.get('estudiante').touched">
+      estudiante requerido
+  </div>
+</div>
+
+<div class="form-group mx-sm-3 mb-2">
+  <label for="idioma">
+    idioma
+  </label>
+  <input novalidate id="idioma" class="form-control" formControlName="idioma" placeholder="idioma">
+  <div class="alert alert-danger alert-dismissible fade show"
+      *ngIf="claseForm.get('idioma').hasError('required') && claseForm.get('idioma').touched">
+      idioma requerido
+  </div>
+</div>
+
+  <button type="submit" class="btn btn-primary" [disabled]="!claseForm.valid">Create</button>
+  <button type="button" class="btn btn-danger ml-3" (click)="cancelCreation()">Cancel</button>
+</form>
+</div>
+</div>

@@ -17,4 +17,7 @@ getActividades(): Observable<Array<Actividad>>
 {
   return this.http.get<Array<ActividadDetail>>(this.apiUrl);
 }
+createActividad(actividad: Actividad): Observable<Actividad> {
+  return this.http.post<Actividad>(environment.baseUrl + 'actividades', actividad);
+}
 }

@@ -11,6 +11,8 @@ export class ActividadDetailComponent implements OnInit {
 
   @Input() actividadDetail: ActividadDetail;
 
+   selectedActividad: Actividad;
+
   constructor() { }
 
   ngOnInit() {

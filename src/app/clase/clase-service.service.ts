@@ -16,5 +16,9 @@ export class ClaseServiceService {
 constructor(private http: HttpClient) { }
 getClases(): Observable<Array<ClaseDetail>>{
   return this.http.get<Array<ClaseDetail>>(this.apiUrl);
-}
+  }
+
+createClase(clase: Clase): Observable<Clase> {
+  return this.http.post<Clase>(environment.baseUrl + 'clases', clase);
+  }
 }
