@@ -1,0 +1,82 @@
+<div class="container-fluid">
+	<div class="col-4 p-3">
+		<form [formGroup]="estudianteForm" (ngSubmit)="!estudianteForm.invalid && createEstudiante(estudianteForm.value)">
+
+			<div class="form-group mx-sm-3 mb-2">
+				<label for="nombre">
+					Nombre
+				</label>
+				<input novalidate id="nombre" class="form-control" formControlName="nombre" placeholder="Nombre completo">
+				<div class="alert alert-danger alert-dismissible fade show"
+					*ngIf="estudianteForm.get('nombre').hasError('required') && estudianteForm.get('nombre').touched">
+					Nombre requerido
+				</div>
+				<div class="alert alert-danger alert-dismissible fade show"
+					*ngIf="estudianteForm.get('nombre').hasError('minlength') && estudianteForm.get('nombre').touched">
+					Nombre muy corto
+				</div>
+			</div>
+
+			<div class="form-group mx-sm-3 mb-2">
+				<label for="identificacion">
+					Identificación
+				</label>
+				<input novalidate id="identificacion" type ="number" class="form-control" formControlName="identificacion" placeholder="Su identificacion">
+				<div class="alert alert-danger alert-dismissible fade show"
+					*ngIf="estudianteForm.get('identificacion').hasError('required') && estudianteForm.get('identificacion').touched">
+					Identificacion requerida
+				</div>
+				<div class="alert alert-danger alert-dismissible fade show"
+					*ngIf="estudianteForm.get('identificacion').hasError('maxlength') && estudianteForm.get('identificacion').touched">
+					Identificacion invalida
+				</div>
+      </div>
+
+      <div class="form-group mx-sm-3 mb-2">
+				<label for="login">
+					Login
+				</label>
+				<input novalidate id="Login" class="form-control" formControlName="login" placeholder="Su nuevo login">
+				<div class="alert alert-danger alert-dismissible fade show"
+					*ngIf="estudianteForm.get('login').hasError('required') && estudianteForm.get('login').touched">
+					Login requerido
+				</div>
+				<div class="alert alert-danger alert-dismissible fade show"
+					*ngIf="estudianteForm.get('login').hasError('minlength') && estudianteForm.get('login').touched">
+					Login muy corto
+				</div>
+      </div>
+
+      <div class="form-group  mx-sm-3 mb-2">
+				<label for="contrasena">
+					Contraseña
+				</label>
+				<input id="contrasena" type="password" class="form-control" formControlName="contrasena" placeholder="Contraseña">
+				<div class="alert alert-danger alert-dismissible fade show"
+					*ngIf="estudianteForm.get('contrasena').hasError('required') && estudianteForm.get('contrasena').touched">
+					Contraseña requerida
+				</div>
+			</div>
+
+			<div class="form-group  mx-sm-3 mb-2">
+				<label for="correo">
+					Correo
+				</label>
+				<input id="correo" type="text" class="form-control" formControlName="correo" placeholder="Su correo">
+				<div class="alert alert-danger alert-dismissible fade show"
+					*ngIf="estudianteForm.get('correo').hasError('required') && estudianteForm.get('correo').touched">
+					Correo requerido
+				</div>
+				<div class="alert alert-danger alert-dismissible fade show"
+					*ngIf="estudianteForm.get('correo').touched && estudianteForm.get('correo').hasError('correo')">
+          Formato de correo invalido
+				</div>
+      </div>
+
+			<div class="row  m-3">
+				<button type="submit" class="btn btn-primary" [disabled]="!estudianteForm.valid">Create</button>
+				<button type="button" class="btn btn-danger ml-3" (click)="cancelCreation()">Cancel</button>
+			</div>
+		</form>
+	</div>
+</div>
