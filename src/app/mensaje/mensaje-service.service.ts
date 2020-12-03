@@ -15,4 +15,7 @@ constructor(private http: HttpClient) { }
 getMensajes(): Observable<Array<Mensaje>>{
   return this.http.get<Array<Mensaje>>(this.apiUrl);
 }
+createMensaje(mensaje: Mensaje): Observable<Mensaje> {
+  return this.http.post<Mensaje>(environment.baseUrl + 'mensaje', mensaje);
+}
 }
