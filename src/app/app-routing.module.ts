@@ -8,6 +8,7 @@ import { EstudianteListComponent } from './estudiante/estudiante-list/estudiante
 import { EstudianteDetailComponent } from "./estudiante/estudiante-detail/estudiante-detail.component";
 import { EstudianteCreateComponent } from "./estudiante/estudiante-create/estudiante-create.component";
 import { HorarioListComponent } from './horario/horario-list/horario-list.component';
+import { ActividadListComponent } from './actividad/actividad-list/actividad-list.component';
 
 const routes: Routes = [
 
@@ -51,6 +52,15 @@ const routes: Routes = [
       {
         path: 'list',
         component: HorarioListComponent
+      }
+    ]
+  },
+  {
+    path: 'actividades',
+    children: [
+      {
+        path: 'list',
+        component: ActividadListComponent
       }
     ]
   }

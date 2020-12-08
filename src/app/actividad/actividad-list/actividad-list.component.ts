@@ -27,7 +27,6 @@ export class ActividadListComponent implements OnInit {
 
   ngOnInit() {
     this.getActividades();
-    console.log("init");
   }
 
 }
