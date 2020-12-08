@@ -1,10 +1,11 @@
 <div class="container-fluid">
-	<div class="col-4 p-3">
+  <h3>Ingresa tus datos para comenzar como profesor</h3>
+	<div class="col-4_p-3">
 		<form [formGroup]="profesorForm" (ngSubmit)="!profesorForm.invalid && createProfesor(profesorForm.value)">
 
 			<div class="form-group mx-sm-3 mb-2">
 				<label for="nombre">
-					Nombre
+					Nombre:
 				</label>
 				<input novalidate id="nombre" class="form-control" formControlName="nombre" placeholder="Su nombre completo">
 				<div class="alert alert-danger alert-dismissible fade show"
@@ -19,7 +20,7 @@
 
 			<div class="form-group mx-sm-3 mb-2">
 				<label for="identificacion">
-					Identificación
+					Identificación:
 				</label>
 				<input novalidate id="identificacion" type ="number" class="form-control" formControlName="identificacion" placeholder="Su identificacion">
 				<div class="alert alert-danger alert-dismissible fade show"
@@ -34,7 +35,7 @@
 
       <div class="form-group mx-sm-3 mb-2">
 				<label for="login">
-					Login
+					Login:
 				</label>
 				<input novalidate id="Login" class="form-control" formControlName="login" placeholder="Su nuevo login">
 				<div class="alert alert-danger alert-dismissible fade show"
@@ -49,7 +50,7 @@
 
       <div class="form-group  mx-sm-3 mb-2">
 				<label for="contrasena">
-					Contraseña
+					Contraseña:
 				</label>
 				<input id="contrasena" type="password" class="form-control" formControlName="contrasena" placeholder="Contraseña">
 				<div class="alert alert-danger alert-dismissible fade show"
@@ -60,7 +61,7 @@
 
 			<div class="form-group  mx-sm-3 mb-2">
 				<label for="correo">
-					Correo
+					Correo:
 				</label>
 				<input id="correo" type="text" class="form-control" formControlName="correo" placeholder="Su correo">
 				<div class="alert alert-danger alert-dismissible fade show"
@@ -75,7 +76,7 @@
 
       <div class="form-group  mx-sm-3 mb-2">
 				<label for="idioma">
-					Idiomas dominados
+					Idiomas dominados:
 				</label>
 				<input id="idioma" type="text" class="form-control" formControlName="idioma" placeholder="Idiomas dominados">
 				<div class="alert alert-danger alert-dismissible fade show"
@@ -86,7 +87,7 @@
 
       <div class="form-group  mx-sm-3 mb-2">
 				<label for="informacionAcademica">
-					Informacion Academica
+					Informacion Academica:
 				</label>
 				<input id="informacionAcademica" type="text" class="form-control" formControlName="informacionAcademica" placeholder="informacion Academica">
 				<div class="alert alert-danger alert-dismissible fade show"
@@ -97,7 +98,7 @@
 
       <div class="form-group  mx-sm-3 mb-2">
 				<label for="canalYoutube">
-					Canal de Youtube
+					Canal de Youtube:
 				</label>
 				<input id="canalYoutube" type="url" class="form-control" formControlName="canalYoutube" placeholder="Opcional">
 			</div>

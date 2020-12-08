@@ -20,5 +20,9 @@ getEstudiantes(): Observable<Array<EstudianteDetail>>{
 getEstudianteDetail(estudianteId): Observable<EstudianteDetail> {
   return this.http.get<EstudianteDetail>(`${this.apiUrl}/${estudianteId}`);
 }
+
+createEstudiante(estudiante: Estudiante): Observable<Estudiante> {
+  return this.http.post<Estudiante>(environment.baseUrl + 'estudiantes', estudiante);
+}
 }
 

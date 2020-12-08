@@ -5,14 +5,17 @@
 	    <li><img class="photo" src="../assets/logoEFP.PNG" /></li>
 	      <li><a href="">Inicio</a></li>
         <li><a
-          class="dropdown-item"
-          [routerLink]="['/profesores/list']"
+          class="dropdown-item" [routerLink]="['/profesores/list']"
           >Conoce a nuestros profesores</a
         ></li>
-        <li><a href="#">Horarios disponibles</a></li>
+        <li><a class="dropdown-item" [routerLink]="['/horarios/list']"
+          >Horarios disponibles</a></li>
         <li><a class="dropdown-item" [routerLink]="['/profesores/create']"
-          >Crear una cuenta</a
-        ></li>
+          >Crear cuenta como profesor</a>
+        </li>
+        <li><a class="dropdown-item" [routerLink]="['/estudiantes/create']"
+          >Crear cuenta como estudiante</a>
+        </li>
       </ul>
     </nav>
   </header>

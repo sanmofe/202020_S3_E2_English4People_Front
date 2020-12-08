@@ -16,7 +16,6 @@ export class ProfesorDetailComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.profesorDetail.id);
   }
 
 }
