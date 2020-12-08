@@ -4,6 +4,8 @@ import { ToastrService } from "ngx-toastr";
 import { Profesor } from '../profesor';
 import { ProfesorServiceService} from '../profesor-service.service';
 import { ProfesorDetail} from '../profesorDetail';
+import { Idioma } from 'src/app/idioma/idioma';
+import { IdiomaService } from 'src/app/idioma/idioma.service';
 
 
 @Component({
@@ -13,9 +15,11 @@ import { ProfesorDetail} from '../profesorDetail';
 })
 export class ProfesorCreateComponent implements OnInit {
 
+  idiomas:Idioma[];
+
   profesorForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private toastrService: ToastrService, private profesorService: ProfesorServiceService) { }
+  constructor(private formBuilder: FormBuilder, private toastrService: ToastrService, private profesorService: ProfesorServiceService,private idiomaService:IdiomaService) { }
 
   cancelCreation(): void {
     this.toastrService.warning('El profesor no fue creado', 'Creacion profesor');
@@ -29,12 +33,15 @@ export class ProfesorCreateComponent implements OnInit {
       login: ["", [Validators.required, Validators.minLength(2)]],
       correo: ["", [Validators.required, Validators.email]],
       contrasena: ["",[Validators.required,]],
+      idioma:["",[Validators.required,]],
       informacionAcademica:["",[Validators.required]],
       canalYoutube:[""]
     });
   }
 
   createProfesor(profesor: ProfesorDetail) {
+    profesor.certificados=[];
+    profesor.idioma = this.buscarId(profesor.idioma,this.idiomas);
     this.profesorService.createProfesor(profesor)
       .subscribe(profesor => {
         this.toastrService.success('El profesor fue creado');
@@ -45,4 +52,26 @@ export class ProfesorCreateComponent implements OnInit {
       alert("El profesor fue creado satisfactoriamente!");
   }
 
+
+   /**
+   * Recover the id of an element
+   */
+  buscarId(pal, list) {
+    for (const i of list) {
+      if (i.name === pal) {
+        return i;
+      }
+    }
+  }
+
+
+
+  getIdiomas(): void {
+    this.idiomaService.getIdiomas()
+      .subscribe(idiomas => {
+        this.idiomas = idiomas;
+      }, err => {
+        this.toastrService.error(err, 'Error');
+      });
+  }
 }
