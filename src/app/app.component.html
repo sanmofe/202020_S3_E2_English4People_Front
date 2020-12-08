@@ -1,8 +1,8 @@
 <body>
   <header>
-   <nav>
-     <ul>
-	    <li><img class="photo" src="../assets/logoEFP.PNG" /></li>
+    <nav>
+      <ul>
+	      <li><img class="photo" src="../assets/logoEFP.PNG" /></li>
 	      <li><a href="">Inicio</a></li>
         <li><a
           class="dropdown-item" [routerLink]="['/profesores/list']"
@@ -10,11 +10,17 @@
         ></li>
         <li><a class="dropdown-item" [routerLink]="['/horarios/list']"
           >Horarios disponibles</a></li>
-        <li><a class="dropdown-item" [routerLink]="['/profesores/create']"
-          >Crear cuenta como profesor</a>
-        </li>
-        <li><a class="dropdown-item" [routerLink]="['/estudiantes/create']"
-          >Crear cuenta como estudiante</a>
+          <li><a class="dropdown-item" [routerLink]="['/#']"
+            >Actividades</a></li>
+        <li><a href="">Crear cuenta</a>
+          <ul>
+            <li><a class="dropdown-item" [routerLink]="['/profesores/create']"
+              >Profesor</a>
+            </li>
+            <li><a class="dropdown-item" [routerLink]="['/estudiantes/create']"
+              >Estudiante</a>
+            </li>
+          </ul>
         </li>
       </ul>
     </nav>
