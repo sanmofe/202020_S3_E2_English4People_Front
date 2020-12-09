@@ -22,14 +22,14 @@
 				<label for="identificacion">
 					Identificación:
 				</label>
-				<input novalidate id="identificacion" type ="number" class="form-control" formControlName="identificacion" placeholder="Su identificacion">
+				<input novalidate id="identificacion" type ="number" class="form-control" formControlName="identificacion" placeholder="Su identificación">
 				<div class="alert alert-danger alert-dismissible fade show"
 					*ngIf="profesorForm.get('identificacion').hasError('required') && profesorForm.get('identificacion').touched">
-					Identificacion requerida
+					Identificación requerida
 				</div>
 				<div class="alert alert-danger alert-dismissible fade show"
 					*ngIf="profesorForm.get('identificacion').hasError('maxlength') && profesorForm.get('identificacion').touched">
-					Identificacion invalida
+					Identificación invalida
 				</div>
       </div>
 
@@ -70,7 +70,7 @@
 				</div>
 				<div class="alert alert-danger alert-dismissible fade show"
 					*ngIf="profesorForm.get('correo').touched && profesorForm.get('correo').hasError('correo')">
-          Formato de correo invalido
+          Formato de correo inválido
 				</div>
       </div>
 
@@ -87,12 +87,12 @@
 
       <div class="form-group  mx-sm-3 mb-2">
 				<label for="informacionAcademica">
-					Informacion Academica:
+					Información Académica:
 				</label>
-				<input id="informacionAcademica" type="text" class="form-control" formControlName="informacionAcademica" placeholder="informacion Academica">
+				<input id="informacionAcademica" type="text" class="form-control" formControlName="informacionAcademica" placeholder="Informacion Académica">
 				<div class="alert alert-danger alert-dismissible fade show"
 					*ngIf="profesorForm.get('informacionAcademica').hasError('required') && profesorForm.get('informacionAcademica').touched">
-					Informacion Academica requerida
+					Información Académica requerida
 				</div>
 			</div>
 
