@@ -27,13 +27,13 @@ header{
   width: 100%;
   position: fixed;
   z-index: 100;
-  height: 16%;
+  height: 10%;
 }
 nav {
   float: left; /* Desplazamos el nav hacia la izquierda */
 }
 nav ul {
-  margin-top: 10px;
+  margin-top: 7px;
   list-style: none;
   overflow: hidden; /* Limpiamos errores de float */
 }
@@ -66,6 +66,7 @@ body {
 .photo {
   height: 75px;
   padding-right: 15px;
+  margin-top: 7px;
 }
 .photo2{
   height: 110px;
