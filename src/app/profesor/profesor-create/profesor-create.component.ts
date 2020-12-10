@@ -40,8 +40,7 @@ export class ProfesorCreateComponent implements OnInit {
   }
 
   createProfesor(profesor: ProfesorDetail) {
-    profesor.certificados=[];
-    profesor.idioma = this.buscarId(profesor.idioma,this.idiomas);
+
     this.profesorService.createProfesor(profesor)
       .subscribe(profesor => {
         this.toastrService.success('El profesor fue creado');
@@ -55,7 +54,7 @@ export class ProfesorCreateComponent implements OnInit {
 
    /**
    * Recover the id of an element
-   */
+
   buscarId(pal, list) {
     for (const i of list) {
       if (i.name === pal) {
@@ -63,9 +62,10 @@ export class ProfesorCreateComponent implements OnInit {
       }
     }
   }
+  */
 
 
-
+/*
   getIdiomas(): void {
     this.idiomaService.getIdiomas()
       .subscribe(idiomas => {
@@ -73,5 +73,6 @@ export class ProfesorCreateComponent implements OnInit {
       }, err => {
         this.toastrService.error(err, 'Error');
       });
-  }
+    }
+    */
 }
