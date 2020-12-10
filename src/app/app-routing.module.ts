@@ -7,6 +7,7 @@ import { ProfesorCreateComponent } from "./profesor/profesor-create/profesor-cre
 import { EstudianteListComponent } from './estudiante/estudiante-list/estudiante-list.component';
 import { EstudianteDetailComponent } from "./estudiante/estudiante-detail/estudiante-detail.component";
 import { EstudianteCreateComponent } from "./estudiante/estudiante-create/estudiante-create.component";
+import { ContratoCreateComponent } from "./contrato/contrato-create/contrato-create.component";
 import { HorarioListComponent } from './horario/horario-list/horario-list.component';
 import { ActividadListComponent } from './actividad/actividad-list/actividad-list.component';
 
@@ -61,6 +62,15 @@ const routes: Routes = [
       {
         path: 'list',
         component: ActividadListComponent
+      }
+    ]
+  },
+  {
+    path: 'contratos',
+    children: [
+      {
+        path: 'create',
+        component: ContratoCreateComponent
       }
     ]
   }

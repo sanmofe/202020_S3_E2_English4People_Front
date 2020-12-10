@@ -18,7 +18,7 @@ export class EstudianteCreateComponent implements OnInit {
   constructor(private formBuilder: FormBuilder, private toastrService: ToastrService, private estudianteService: EstudianteServiceService) { }
 
   cancelCreation(): void {
-    this.toastrService.warning('El profesor no fue creado', 'Creacion profesor');
+    this.toastrService.warning('El estudiante no fue creado', 'Creacion estudiante');
     this.estudianteForm.reset();
   }
 
@@ -35,12 +35,12 @@ export class EstudianteCreateComponent implements OnInit {
   createEstudiante(estudiante: EstudianteDetail) {
     this.estudianteService.createEstudiante(estudiante)
       .subscribe(estudiante => {
-        this.toastrService.success('El profesor fue creado');
+        this.toastrService.success('El estudiante fue creado');
         this.estudianteForm.reset()
       }, err => {
         this.toastrService.error(err, 'Error');
       });
-      alert("El profesor fue creado satisfactoriamente!");
+      alert("El estudiante fue creado satisfactoriamente!");
   }
 
 }

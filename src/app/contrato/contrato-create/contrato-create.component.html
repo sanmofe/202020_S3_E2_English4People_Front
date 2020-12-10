@@ -3,6 +3,28 @@
 
 <form [formGroup]="contratoForm" (ngSubmit)="!contratoForm.invalid && createContrato(contratoForm.value)">
 
+  <div class="form-group  mx-sm-3 mb-2">
+    <label for="profesor">
+      Nombre profesor
+    </label>
+    <input id="profesor" type="text" class="form-control" formControlName="profesor" placeholder="Nombre profesor">
+    <div class="alert alert-danger alert-dismissible fade show"
+      *ngIf="contratoForm.get('profesor').hasError('required') && contratoForm.get('profesor').touched">
+      Nombre del profesor requerido
+    </div>
+  </div>
+
+  <div class="form-group  mx-sm-3 mb-2">
+    <label for="estudiante">
+      Nombre del estudiante
+    </label>
+    <input id="estudiante" type="text" class="form-control" formControlName="estudiante" placeholder="Nombre estudiante">
+    <div class="alert alert-danger alert-dismissible fade show"
+      *ngIf="contratoForm.get('estudiante').hasError('required') && contratoForm.get('estudiante').touched">
+      Nombre del estudiante requerido
+    </div>
+  </div>
+
   <div class="form-group mx-sm-3 mb-2">
     <label for="numeroHoras">
         Numero de horas
