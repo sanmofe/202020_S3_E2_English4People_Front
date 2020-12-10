@@ -4,7 +4,7 @@ import { Idioma } from '../idioma';
 @Component({
   selector: 'app-idioma-detail',
   templateUrl: './idioma-detail.component.html',
-  styleUrls: ['./idioma-detail.component.css']
+  styleUrls: []
 })
 export class IdiomaDetailComponent implements OnInit {
 

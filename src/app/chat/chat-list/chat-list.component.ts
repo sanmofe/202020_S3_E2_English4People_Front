@@ -6,7 +6,7 @@ import { ChatDetail} from '../chatDetail';
 @Component({
   selector: 'app-chat-lista',
   templateUrl: './chat-list.component.html',
-  styleUrls: ['./chat-list.component.css']
+  styleUrls: []
 })
 export class ChatListComponent implements OnInit {
 

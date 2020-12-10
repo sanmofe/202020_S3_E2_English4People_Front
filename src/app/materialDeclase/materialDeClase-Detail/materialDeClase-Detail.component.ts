@@ -5,7 +5,7 @@ import { MaterialDeclase } from '../materialDeClase';
 @Component({
   selector: 'app-materialDeClase-Detail',
   templateUrl: './materialDeClase-Detail.component.html',
-  styleUrls: ['./materialDeClase-Detail.component.css']
+  styleUrls: []
 })
 export class MaterialDeClaseDetailComponent implements OnInit {
 

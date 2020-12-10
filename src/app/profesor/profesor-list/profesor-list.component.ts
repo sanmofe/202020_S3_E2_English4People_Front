@@ -6,7 +6,7 @@ import {ProfesorServiceService} from '../profesor-service.service';
 @Component({
   selector: 'app-profesor-list',
   templateUrl: './profesor-list.component.html',
-  styleUrls: ['./profesor-list.component.css']
+  styleUrls: []
 })
 export class ProfesorListComponent implements OnInit {
 

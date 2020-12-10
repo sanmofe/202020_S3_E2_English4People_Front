@@ -4,7 +4,7 @@ import { Respuesta } from '../respuesta';
 @Component({
   selector: 'app-respuesta-detail',
   templateUrl: './respuesta-detail.component.html',
-  styleUrls: ['./respuesta-detail.component.css']
+  styleUrls: []
 })
 export class RespuestaDetailComponent implements OnInit {
 

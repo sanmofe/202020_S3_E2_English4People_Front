@@ -7,7 +7,7 @@ import { ClaseServiceService } from '../clase-service.service';
 @Component({
   selector: 'app-clase-create',
   templateUrl: './clase-create.component.html',
-  styleUrls: ['./clase-create.component.scss']
+  styleUrls: []
 })
 export class ClaseCreateComponent implements OnInit {
 

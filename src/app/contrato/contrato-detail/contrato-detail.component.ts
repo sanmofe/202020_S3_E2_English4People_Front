@@ -5,7 +5,7 @@ import { ContratoDetail } from '../contratoDetail';
 @Component({
   selector: 'app-contrato-detail',
   templateUrl: './contrato-detail.component.html',
-  styleUrls: ['./contrato-detail.component.css']
+  styleUrls: []
 })
 export class ContratoDetailComponent implements OnInit {
 

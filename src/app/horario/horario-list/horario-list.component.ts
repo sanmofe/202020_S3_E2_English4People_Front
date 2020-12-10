@@ -6,7 +6,7 @@ import { HorarioDetail } from '../horarioDetail';
 @Component({
   selector: 'app-horario-list',
   templateUrl: './horario-list.component.html',
-  styleUrls: ['./horario-list.component.css']
+  styleUrls: []
 })
 export class HorarioListComponent implements OnInit {
 

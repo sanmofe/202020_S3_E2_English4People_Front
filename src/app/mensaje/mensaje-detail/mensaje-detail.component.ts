@@ -5,7 +5,7 @@ import { MensajeDetail } from '../mensajeDetail';
 @Component({
   selector: 'app-mensaje-detail',
   templateUrl: './mensaje-detail.component.html',
-  styleUrls: ['./mensaje-detail.component.css']
+  styleUrls: []
 })
 export class MensajeDetailComponent implements OnInit {
 

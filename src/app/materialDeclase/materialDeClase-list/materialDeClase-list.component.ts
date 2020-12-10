@@ -6,7 +6,7 @@ import { MaterialDeClaseServiceService} from '../materialDeClase-service.service
 @Component({
   selector: 'app-materialDeClase-list',
   templateUrl: './materialDeClase-list.component.html',
-  styleUrls: ['./materialDeClase-list.component.css']
+  styleUrls: []
 })
 export class MaterialDeClaseListComponent implements OnInit {
 

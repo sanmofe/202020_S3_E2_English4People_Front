@@ -5,7 +5,7 @@ import { ActividadDetail } from '../actividadDetail';
 @Component({
   selector: 'app-actividad-detail',
   templateUrl: './actividad-detail.component.html',
-  styleUrls: ['./actividad-detail.component.css']
+  styleUrls: []
 })
 export class ActividadDetailComponent implements OnInit {
 

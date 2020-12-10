@@ -6,7 +6,7 @@ import { ContratoDetail } from '../contratoDetail';
 @Component({
   selector: 'app-contrato-list',
   templateUrl: './contrato-list.component.html',
-  styleUrls: ['./contrato-list.component.css']
+  styleUrls: []
 })
 export class ContratoListComponent implements OnInit {
 

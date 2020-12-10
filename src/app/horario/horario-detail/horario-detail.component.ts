@@ -5,7 +5,7 @@ import { HorarioDetail } from '../horarioDetail';
 @Component({
   selector: 'app-horario-detail',
   templateUrl: './horario-detail.component.html',
-  styleUrls: ['./horario-detail.component.css']
+  styleUrls: []
 })
 export class HorarioDetailComponent implements OnInit {
 

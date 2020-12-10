@@ -5,7 +5,7 @@ import {MensajeServiceService} from '../mensaje-service.service';
 @Component({
   selector: 'app-mensaje-list',
   templateUrl: './mensaje-list.component.html',
-  styleUrls: ['./mensaje-list.component.css']
+  styleUrls: []
 })
 export class MensajeListComponent implements OnInit {
 

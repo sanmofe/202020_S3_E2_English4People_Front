@@ -4,7 +4,7 @@ import { DiaSemana } from '../diaSemana';
 @Component({
   selector: 'app-diaSemana-detail',
   templateUrl: './diaSemana-detail.component.html',
-  styleUrls: ['./diaSemana-detail.component.css']
+  styleUrls: []
 })
 export class DiaSemanaDetailComponent implements OnInit {
 

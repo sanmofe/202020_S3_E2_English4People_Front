@@ -7,7 +7,7 @@ import { IdiomaService } from '../idioma.service';
 @Component({
   selector: 'app-idioma-create',
   templateUrl: './idioma-create.component.html',
-  styleUrls: ['./idioma-create.component.css'],
+  styleUrls: [],
 })
 export class IdiomaCreateComponent implements OnInit {
   idiomaForm: FormGroup;

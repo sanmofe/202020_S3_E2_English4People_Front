@@ -4,7 +4,7 @@ import { CalificacionDetail } from '../calificacionDetail';
 @Component({
   selector: 'app-calificacion-detail',
   templateUrl: './calificacion-detail.component.html',
-  styleUrls: ['./calificacion-detail.component.css']
+  styleUrls: []
 })
 export class CalificacionDetailComponent implements OnInit {
 

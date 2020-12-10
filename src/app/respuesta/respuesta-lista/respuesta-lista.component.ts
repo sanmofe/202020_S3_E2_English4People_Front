@@ -6,7 +6,7 @@ import { RespuestaService } from '../respuesta.service';
 @Component({
   selector: 'app-respuesta-lista',
   templateUrl: './respuesta-lista.component.html',
-  styleUrls: ['./respuesta-lista.component.css']
+  styleUrls: []
 })
 export class RespuestaListaComponent implements OnInit {
 

@@ -6,7 +6,7 @@ import { ClaseDetail } from '../claseDetail';
 @Component({
   selector: 'app-clase-list',
   templateUrl: './clase-list.component.html',
-  styleUrls: ['./clase-list.component.css']
+  styleUrls: []
 })
 export class ClaseListComponent implements OnInit {
 

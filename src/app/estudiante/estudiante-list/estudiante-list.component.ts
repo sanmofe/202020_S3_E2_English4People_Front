@@ -6,7 +6,7 @@ import {EstudianteDetail} from '../estudianteDetail';
 @Component({
   selector: 'app-estudiante-list',
   templateUrl: './estudiante-list.component.html',
-  styleUrls: ['./estudiante-list.component.css']
+  styleUrls: []
 })
 export class EstudianteListComponent implements OnInit {
 

@@ -7,7 +7,7 @@ import { CalificacionDetail } from '../calificacionDetail';
 @Component({
   selector: 'app-calificacion-lista',
   templateUrl: './calificacion-lista.component.html',
-  styleUrls: ['./calificacion-lista.component.scss']
+  styleUrls: []
 })
 export class CalificacionListaComponent implements OnInit {
 

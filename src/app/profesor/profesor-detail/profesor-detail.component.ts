@@ -5,7 +5,7 @@ import { ProfesorDetail } from '../profesorDetail';
 @Component({
   selector: 'app-profesor-detail',
   templateUrl: './profesor-detail.component.html',
-  styleUrls: ['./profesor-detail.component.css']
+  styleUrls: []
 })
 export class ProfesorDetailComponent implements OnInit {
 

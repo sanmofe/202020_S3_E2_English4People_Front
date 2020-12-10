@@ -8,7 +8,7 @@ import { ContratoServiceService } from '../contrato-service.service';
 @Component({
   selector: 'app-contrato-create',
   templateUrl: './contrato-create.component.html',
-  styleUrls: ['./contrato-create.component.scss']
+  styleUrls: []
 })
 export class ContratoCreateComponent implements OnInit {
 

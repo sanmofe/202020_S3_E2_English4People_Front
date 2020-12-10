@@ -5,7 +5,7 @@ import { ChatDetail } from '../chatDetail';
 @Component({
   selector: 'app-chat-detail',
   templateUrl: './chat-detail.component.html',
-  styleUrls: ['./chat-detail.component.css']
+  styleUrls: []
 })
 export class ChatDetailComponent implements OnInit {
 

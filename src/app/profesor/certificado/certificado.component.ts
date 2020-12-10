@@ -5,7 +5,7 @@ import { Certificado} from '../certificado';
 @Component({
   selector: 'app-certificado',
   templateUrl: './certificado.component.html',
-  styleUrls: ['./certificado.component.css']
+  styleUrls: []
 })
 export class CertificadoComponent implements OnInit {
 
