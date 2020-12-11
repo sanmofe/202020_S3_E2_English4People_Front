@@ -50,29 +50,4 @@ export class ProfesorCreateComponent implements OnInit {
       });
       alert("El profesor fue creado satisfactoriamente!");
   }
-
-
-   /**
-   * Recover the id of an element
-
-  buscarId(pal, list) {
-    for (const i of list) {
-      if (i.name === pal) {
-        return i;
-      }
-    }
-  }
-  */
-
-
-/*
-  getIdiomas(): void {
-    this.idiomaService.getIdiomas()
-      .subscribe(idiomas => {
-        this.idiomas = idiomas;
-      }, err => {
-        this.toastrService.error(err, 'Error');
-      });
-    }
-    */
 }

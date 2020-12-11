@@ -30,7 +30,7 @@ header{
   width: 100%;
   position: fixed;
   z-index: 100;
-  height: 10%;
+  height: 15%;
 }
 nav {
   float: left; /* Desplazamos el nav hacia la izquierda */

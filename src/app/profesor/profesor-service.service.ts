@@ -22,7 +22,7 @@ getProfesorDetail(profesorId): Observable<ProfesorDetail> {
 }
 
 createProfesor(profesor: Profesor): Observable<Profesor> {
-  return this.http.post<Profesor>(environment.baseUrl + 'profesores', profesor);
+  return this.http.post<Profesor>(this.apiUrl, profesor);
 }
 
 }
