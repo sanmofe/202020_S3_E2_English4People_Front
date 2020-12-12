@@ -15,5 +15,7 @@ export class ChatServiceService {
 constructor(private http: HttpClient) { }
 getChats(): Observable<Array<ChatDetail>>{
   return this.http.get<Array<ChatDetail>>(this.apiUrl);
+
+
 }
 }

@@ -4,10 +4,14 @@ import { environment } from '../../environments/environment';
 import { Mensaje } from './mensaje';
 import { Observable } from 'rxjs';
 
+
+
 @Injectable({
   providedIn: 'root'
 })
 export class MensajeServiceService {
+
+
 
   private apiUrl = environment.baseUrl + 'mensajes';
 
@@ -17,5 +21,9 @@ getMensajes(): Observable<Array<Mensaje>>{
 }
 createMensaje(mensaje: Mensaje): Observable<Mensaje> {
   return this.http.post<Mensaje>(environment.baseUrl + 'mensaje', mensaje);
+
+
 }
+
+
 }
