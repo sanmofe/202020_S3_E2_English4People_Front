@@ -25,6 +25,8 @@ import { MaterialDeclase } from './materialDeclase/materialDeClase';
 import { MensajeListComponent } from './mensaje/mensaje-list/mensaje-list.component';
 import { RespuestaListaComponent } from './respuesta/respuesta-lista/respuesta-lista.component';
 
+
+
 const routes: Routes = [
 
   {
