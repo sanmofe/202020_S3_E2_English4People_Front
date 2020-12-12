@@ -14,6 +14,16 @@ import { IdiomaCreateComponent } from './idioma/idioma-create/idioma-create.comp
 import { IdiomaListarComponent } from './idioma/idioma-listar/idioma-listar.component';
 import { DiaSemanaCreateComponent } from './diaSemana/diaSemana-create/diaSemana-create.component';
 import { DiaSemanaListarComponent } from './diaSemana/diaSemana-listar/diaSemana-listar.component';
+import { ActividadCreateComponent } from './actividad/actividad-create/actividad-create.component';
+import { CalificacionCreateComponent } from './calificacion/calificacion-create/calificacion-create.component';
+import { CalificacionListaComponent } from './calificacion/calificacion-lista/calificacion-lista.component';
+import { ChatListComponent } from './chat/chat-list/chat-list.component';
+import { ClaseCreateComponent } from './clase/clase-create/clase-create.component';
+import { ClaseListComponent } from './clase/clase-list/clase-list.component';
+import { ContratoListComponent } from './contrato/contrato-list/contrato-list.component';
+import { MaterialDeclase } from './materialDeclase/materialDeClase';
+import { MensajeListComponent } from './mensaje/mensaje-list/mensaje-list.component';
+import { RespuestaListaComponent } from './respuesta/respuesta-lista/respuesta-lista.component';
 
 const routes: Routes = [
 
@@ -52,11 +62,15 @@ const routes: Routes = [
     ]
   },
   {
-    path: 'horarios',
+    path: 'contratos',
     children: [
       {
+        path: 'create',
+        component: ContratoCreateComponent
+      },
+      {
         path: 'list',
-        component: HorarioListComponent
+        component: ContratoListComponent
       }
     ]
   },
@@ -64,17 +78,69 @@ const routes: Routes = [
     path: 'actividades',
     children: [
       {
+        path: 'create',
+        component: ActividadCreateComponent
+      },
+      {
         path: 'list',
         component: ActividadListComponent
       }
     ]
   },
   {
-    path: 'contratos',
+    path: 'calificaciones',
     children: [
       {
         path: 'create',
-        component: ContratoCreateComponent
+        component: CalificacionCreateComponent
+      },
+      {
+        path: 'list',
+        component: CalificacionListaComponent
+      }
+    ]
+  },
+  {
+    path: 'chats',
+    children: [
+      {
+        path: 'list',
+        component: ChatListComponent
+      }
+    ]
+  },
+  {
+    path: 'clases',
+    children: [
+      {
+        path: 'create',
+        component: ClaseCreateComponent
+      },
+      {
+        path: 'list',
+        component: ClaseListComponent
+      }
+    ]
+  },
+  {
+    path: 'diasSemana',
+    children: [
+      {
+        path: 'create',
+        component: DiaSemanaCreateComponent
+      },
+      {
+        path: 'list',
+        component: DiaSemanaListarComponent
+      }
+    ]
+  },
+  {
+    path: 'horarios',
+    children: [
+      {
+        path: 'list',
+        component: HorarioListComponent
       }
     ]
   },
@@ -92,15 +158,20 @@ const routes: Routes = [
     ]
   },
   {
-    path: 'diasSemana',
+    path: 'mensajes',
     children: [
       {
-        path: 'create',
-        component: DiaSemanaCreateComponent
-      },
+        path: 'list',
+        component: MensajeListComponent
+      }
+    ]
+  },
+  {
+    path: 'respuestas',
+    children: [
       {
         path: 'list',
-        component: DiaSemanaListarComponent
+        component: RespuestaListaComponent
       }
     ]
   }

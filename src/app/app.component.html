@@ -11,16 +11,7 @@
             >Conoce a nuestros profesores</a
           >
         </li>
-        <li>
-          <a class="dropdown-item" [routerLink]="['/horarios/list']"
-            >Ver Horarios</a
-          >
-        </li>
-        <li>
-          <a class="dropdown-item" [routerLink]="['/actividades/list']"
-            >Actividades</a
-          >
-        </li>
+
         <li>
           <a href="">Crear cuenta</a>
           <ul>
@@ -36,30 +27,151 @@
             </li>
           </ul>
         </li>
+
         <li>
-          <a class="dropdown-item" [routerLink]="['/contratos/create']"
-            >Contratar</a
+          <a class="dropdown-item" [routerLink]="['/estudiantes/list']"
+            >Ver Estudiantes</a
           >
         </li>
+
         <li>
-          <a class="dropdown-item" [routerLink]="['/idiomas/create']"
-            >Crear Idioma</a
-          >
+          <a href="">Contratos</a>
+          <ul>
+            <li>
+              <a class="dropdown-item" [routerLink]="['/contratos/create']"
+                >Contratar</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" [routerLink]="['/contratos/list']"
+                >Ver contratos</a
+              >
+            </li>
+          </ul>
         </li>
+
         <li>
-          <a class="dropdown-item" [routerLink]="['/idiomas/list']"
-            >Ver Idiomas</a
-          >
+          <a href="">Clases</a>
+          <ul>
+            <li>
+              <a class="dropdown-item" [routerLink]="['/clases/create']"
+                >Crear una clase</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" [routerLink]="['/clases/list']"
+                >Ver Clases</a
+              >
+            </li>
+          </ul>
         </li>
+
         <li>
-          <a class="dropdown-item" [routerLink]="['/diasSemana/create']"
-            >Crear DiaSemana</a
-          >
+          <a href="">Actividades</a>
+          <ul>
+            <li>
+              <a class="dropdown-item" [routerLink]="['/actividades/create']"
+                >Crear Actividad</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" [routerLink]="['/actividades/list']"
+                >Ver Actividades</a
+              >
+            </li>
+          </ul>
         </li>
+
         <li>
-          <a class="dropdown-item" [routerLink]="['/diasSemana/list']"
-            >Ver DiasSemana</a
-          >
+          <a href="">Idiomas</a>
+          <ul>
+            <li>
+              <a class="dropdown-item" [routerLink]="['/idiomas/create']"
+                >Crear Idioma</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" [routerLink]="['/idiomas/list']"
+                >Ver Idiomas</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="">DiasSemana</a>
+          <ul>
+            <li>
+              <a class="dropdown-item" [routerLink]="['/diasSemana/create']"
+                >Crear DiaSemana</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" [routerLink]="['/diasSemana/list']"
+                >Ver DiasSemana</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="">Calificaciones</a>
+          <ul>
+            <li>
+              <a class="dropdown-item" [routerLink]="['/calificaciones/create']"
+                >Calificar un profesor</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" [routerLink]="['/calificaciones/list']"
+                >Ver Calificaciones</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="">Chats</a>
+          <ul>
+            <li>
+              <a class="dropdown-item" [routerLink]="['/chats/list']"
+                >Ver Chats</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="">Horarios</a>
+          <ul>
+            <li>
+              <a class="dropdown-item" [routerLink]="['/horarios/list']"
+                >Ver Horarios</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="">Mensajes</a>
+          <ul>
+            <li>
+              <a class="dropdown-item" [routerLink]="['/mensajes/list']"
+                >Ver Mensajes</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="">Respuestas</a>
+          <ul>
+            <li>
+              <a class="dropdown-item" [routerLink]="['/respuestas/list']"
+                >Ver Respuestas</a
+              >
+            </li>
+          </ul>
         </li>
       </ul>
     </nav>
