@@ -10,6 +10,10 @@ import { EstudianteCreateComponent } from "./estudiante/estudiante-create/estudi
 import { ContratoCreateComponent } from "./contrato/contrato-create/contrato-create.component";
 import { HorarioListComponent } from './horario/horario-list/horario-list.component';
 import { ActividadListComponent } from './actividad/actividad-list/actividad-list.component';
+import { IdiomaCreateComponent } from './idioma/idioma-create/idioma-create.component';
+import { IdiomaListarComponent } from './idioma/idioma-listar/idioma-listar.component';
+import { DiaSemanaCreateComponent } from './diaSemana/diaSemana-create/diaSemana-create.component';
+import { DiaSemanaListarComponent } from './diaSemana/diaSemana-listar/diaSemana-listar.component';
 
 const routes: Routes = [
 
@@ -71,6 +75,32 @@ const routes: Routes = [
       {
         path: 'create',
         component: ContratoCreateComponent
+      }
+    ]
+  },
+  {
+    path: 'idiomas',
+    children: [
+      {
+        path: 'create',
+        component: IdiomaCreateComponent
+      },
+      {
+        path: 'list',
+        component: IdiomaListarComponent
+      }
+    ]
+  },
+  {
+    path: 'diasSemana',
+    children: [
+      {
+        path: 'create',
+        component: DiaSemanaCreateComponent
+      },
+      {
+        path: 'list',
+        component: DiaSemanaListarComponent
       }
     ]
   }
