@@ -4,9 +4,6 @@ import { ToastrService } from "ngx-toastr";
 import { Profesor } from '../profesor';
 import { ProfesorServiceService} from '../profesor-service.service';
 import { ProfesorDetail} from '../profesorDetail';
-import { Idioma } from 'src/app/idioma/idioma';
-import { IdiomaService } from 'src/app/idioma/idioma.service';
-
 
 @Component({
   selector: 'app-profesor-create',
@@ -15,11 +12,9 @@ import { IdiomaService } from 'src/app/idioma/idioma.service';
 })
 export class ProfesorCreateComponent implements OnInit {
 
-  idiomas:Idioma[];
-
   profesorForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private toastrService: ToastrService, private profesorService: ProfesorServiceService,private idiomaService:IdiomaService) { }
+  constructor(private formBuilder: FormBuilder, private toastrService: ToastrService, private profesorService: ProfesorServiceService) { }
 
   cancelCreation(): void {
     this.toastrService.warning('El profesor no fue creado', 'Creacion profesor');
@@ -33,7 +28,6 @@ export class ProfesorCreateComponent implements OnInit {
       login: ["", [Validators.required, Validators.minLength(2)]],
       correo: ["", [Validators.required, Validators.email]],
       contrasena: ["",[Validators.required,]],
-      idioma:["",[Validators.required,]],
       informacionAcademica:["",[Validators.required]],
       canalYoutube:[""]
     });
